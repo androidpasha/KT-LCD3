@@ -6,12 +6,12 @@
 #include <DNSServer.h>
 #include <ESP8266WebServer.h> // Библиотека для управления устройством по HTTP (например из браузера)
 #include <WebSocketsServer.h>
-#include "ArduinoJson.h"
+#include <ArduinoJson.h>
 #include <FS.h> // Библиотека для работы с файловой системой
 #include <LittleFS.h>
 #include "SaveTemplateDataToLFS.h"
 #include "Ticker.h"
-#define SERIAL1 // Закоментировать если будет использоваться обычный Serial (0)
+#define SERIAL1 // Закомментировать если будет использоваться обычный Serial (0)
 #define MINIMUM_TIME_BETWEEN_WRITES_TO_THE_FILE_SYSTEM_SEC 60
 
     const char *ssidAP = "Bicycle"; // Название генерируемой точки доступа

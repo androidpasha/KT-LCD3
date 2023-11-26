@@ -7,7 +7,7 @@
 #define SERIALTIMEOUT 50
 #define MINSPEED 2
 
-typedef struct __attribute__((packed, aligned(1))) SettingsStruct
+typedef struct SettingsStruct
 {
     uint8_t pasLevel : 3; // Range:0-3
     bool cruise;
@@ -67,7 +67,7 @@ typedef struct __attribute__((packed, aligned(1))) SettingsStruct
 
 } SettingsStruct;
 
-typedef struct __attribute__((packed, aligned(1))) ReceiveDataStruct
+typedef struct ReceiveDataStruct
 {
     uint32_t speedPeriod;
     float speed;
