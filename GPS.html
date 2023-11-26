@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <html lang="ru">
+
+  </html>
+  <title>GPS Спидометр</title>
+</head>
+
+<body>
+  <h1>GPS Спидометр</h1>
+  <p id="speed">Скорость</p>
+  <p id="accuracy">Точность</p>
+  <p id="latitude">Широта</p>
+  <p id="longitude">Долгота</p>
+  <p id="altitude">Высота</p>
+  
+  <script>
+  
+let id;
+let target;
+let options;
+
+function success(pos) {
+  const crd = pos.coords;
+  let speed = pos.coords.speed;
+  console.log (crd);
+  console.log(speed);
+  document.getElementById("speed").textContent = "Скорость: " + pos.coords.speed;
+  document.getElementById("accuracy").textContent = "Точность: " + pos.coords.accuracy + " м";
+  document.getElementById("latitude").textContent = "Широта: " + pos.coords.latitude;
+  document.getElementById("longitude").textContent = "Долгота: " + pos.coords.longitude;
+  document.getElementById("altitude").textContent = "Высота: " + pos.coords.altitude;
+}
+
+function error(err) {
+  console.error(`ERROR(${err.code}): ${err.message}`);
+}
+
+
+options = {
+  enableHighAccuracy: true,
+  timeout: 1000,
+  maximumAge: 0,
+};
+
+id = navigator.geolocation.watchPosition(success, error, options);
+
+
+  </script>
+</body>
+
+</html>

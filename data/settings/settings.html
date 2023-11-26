@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Налаштування</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="center">
+        <h2>Налаштування KT-LCD*</h2>
+    </div>
+    <h4>*Назви параметрів "P" та "С" відповідають назвам в інструкції до дисплеїв KT-LCD.
+        <br> Параметри за замовчуванням наступні:
+        <br> множник потужності – 8, ліміт швидкості – 40, діаметр колеса – 24;
+        <br>Р1 – 87, Р2 –1, Р3 – 1, Р4 – 0, Р5 – 12;
+        <br>С1 – 2, С2 – 0, С4 – 0, С4.1 – 100, С4.2 – 50, С5 – 10, С12 – 4, С13 – 0, С14 – 2.
+        <br> Нижче відображені раніше збережені параметри, які можна змінювати:
+    </h4>
+    <style>
+        input,
+        select {
+            min-width: 80px;
+            max-width: 300px;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+
+        #powerFactor {
+            max-width: 80px;
+        }
+
+
+        button {
+            width: 40%;
+            padding: 12px;
+            font-size: 1.25rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+            background-color: #c4dcfe;
+            font-size: 1.25rem
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <table>
+        <tr>
+            <td> <label for="usedGPS"><b>Використовувати GPS замість контроллера велосипеда.</b> При використанні GPS
+                    зменшуэться точність. Підрахунок енергії припиняється.</label><br><br>
+                <div class="center"><input type="checkbox" id="usedGPS" name="usedGPS"></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="powerFactor"><b>Множник потужності.</b> Використовується для коректного відображення
+                    потужності на дисплеї. Діапазон
+                    від 1 до 25, може бути дробовим:</label><br><br>
+                <div class="center"><input type="number" id="powerFactor" name="powerFactor" value="" min="1" max="25"
+                        step="any"></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="maxSpeedLimit"><b>Ліміт швидкості, км/г:</b></label><br><br>
+                <div class="center"><input type="number" id="maxSpeedLimit" name="maxSpeedLimit" value="" min="0"
+                        max="100">
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="wheelDiameter"><b>Діаметр колеса:</b></label><br><br>
+                <div class="center"> <select id="wheelRimDiameter" name="wheelRimDiameter">
+                        <option value="5">5"</option>
+                        <option value="6">6"</option>
+                        <option value="8">8"</option>
+                        <option value="10">10"</option>
+                        <option value="12">12"</option>
+                        <option value="14">14"</option>
+                        <option value="16">16"</option>
+                        <option value="18">18"</option>
+                        <option value="20">20"</option>
+                        <option value="23">23"</option>
+                        <option value="24">24"</option>
+                        <option value="26">26"</option>
+                        <option value="28">28"</option>
+                        <option value="29">29"</option>
+                        <option value="700">700c</option>
+                    </select></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C1_PasSensorSensitivity">
+                    <div class="center"><b>Параметри P:</b></div>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="P1_MotorFeature"><b>P1. Кількість магнітів,</b> помножена на коефіцієнт редукції мотора -
+                    для
+                    коректного відображення швидкості без спеціального датчика в моторі: Діапазон від 1 до
+                    255:</label><br><br>
+                <div class="center"><input type="number" id="P1_MotorFeature" name="P1_MotorFeature" value="" min=1
+                        max=255></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="P2_WheelSetSpeedPulse"><b>P2. Кількість датчиків швидкості в моторі.</b>
+                    <br> (Для прямопривідних двигунів - 0:)</label><br><br>
+                <div class="center">
+                    <select id="P2_WheelSetSpeedPulse" name="P2_WheelSetSpeedPulse">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="P3_PasControlMode"><b>P3. - режим налаштування PAS:</b><br>
+                    <b>галочка знята</b> – налаштування ASSIST в ручну через параметр С14;<br>
+                    <b>галочка встановлена</b> – автоматичне налаштування: при наявності сигналу з PAS (при обертанні
+                    педалей) контролер буде давати постійну потужність, в залежності від обраного
+                    значення Assist:</label><br><br>
+                <div class="center"><input type="checkbox" id="P3_PasControlMode" name="P3_PasControlMode"></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="P4_ThrottleActiveMode"><b>P4 – «zero start»</b> можливість старту з місця ручкою газу:
+                    <br><b>галочка знята</b> - дозволяє стартувати з місця;
+                    <br><b>галочка встановлена</b> - для включення управління ручкою газу тільки після початку обертання
+                    педалей (при використання PAS-сенсора):</label><br><br>
+                <div class="center"><input type="checkbox" id="P4_ThrottleActiveMode" name="P4_ThrottleActiveMode">
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="P5_BatteryMonitorModes"><b>P5 - відображення заряду батареї.</b>
+                    <br>При встановленні значення "0" - секції
+                    батареї на дисплеї будуть гаснути відповідно до вольтажу в режимі реального
+                    часу. Це означає, що якщо, наприклад, ви використовуєте акумулятор з
+                    діапазоном робочої напруги 40-55 вольт (всього 15 вольт діапазон), то перша
+                    секція погасне при 75%, тобто 51 Вольт, друга - 50% тобто 48 Вольт, третя – 25%
+                    тобто 43 Вольти, повністю зникнуть і блимає - менше 42 вольт. Така система
+                    визначення залишку заряду некоректна, тому що, зниження напруги не прямо
+                    пропорційне витраті заряду батареї. Як правило, при зниженні напруги нижче 45
+                    Вольт заряд вже практично повністю вичерпано. Тому можна використовувати
+                    значення цього параметру від 1 до 40, підбираючи найбільш коректне
+                    відображення емпірично (методом підбору). Для літієвої батареї
+                    на 24В параметр встановлюється від 4 до 11, для літієвої
+                    батареї 36В від 5 до 15. Діапазон від 0 до 40:</label><br><br>
+                <div class="center"><input type="number" id="P5_BatteryMonitorModes" name="P5_BatteryMonitorModes"
+                        value="" min="0" max="40"></div><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="C1_PasSensorSensitivity">
+                    <div class="center"><b>Параметри С:</b></div>
+                </label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="C1_PasSensorSensitivity"><b>C1. Початкова чутливість до PAS.</b>
+                    <br>Від 0 до 2 для прямого та від 5 до
+                    7 для зворотного типу датчика:</label><br><br>
+                <div class="center">
+                    <select id="C1_PasSensorSensitivity" name="C1_PasSensorSensitivity">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C2_MotorPhase"><b>C2. Зсув фаз живлення двигуна</b>, залежить від можливостей контролера. За
+                    замовчуванням 0:</label><br><br>
+                <div class="center">
+                    <select id="C2_MotorPhase" name="C2_MotorPhase">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C1_PasSensorSensitivity"><b>С3, С6-С11 не використовуються.</b> Вони стосуються налаштування
+                    відображення та деяких функцій фізичного дисплею.</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C4_ThrottleFunction"><b>C4. Режим ручки газу.</b> Залежить від параметра Р4.
+                    <br>
+                    <br>Коли галочка параметру P4 знята (off), значення С4 такі:
+                    <br>0 - активний режим пуску двигуна ручкою газу;
+                    <br>1 - активний режим пуску двигуна ручкою газу з обмеженням швидкості до 6 км/год;
+                    <br>2 - активний режим запуску двигуна ручкою газу. Максимальна швидкість визначена налаштуваннями;
+                    <br>3 - активний режим пуску двигуна ручкою газу.
+                    <br>
+
+
+                    <br>Коли галочка параметру P4 встановлена (on), значення С4 такі:
+                    <br>0 - активний режим пуску двигуна ручкою газу тільки після обертання педалей;
+                    <br>1 - до початку обертання педалей діє обмеження швидкості 6 км/год. Далі максимальна швидкість не
+                    обмежена;
+                    <br>2 - активний режим пуску двигуна ручкою газу лише після обертання педалей. максимальна швидкість
+                    визначена налаштуваннями;
+                    <br>3 - не визначено.
+                    <br>За замовчуванням нуль:</label><br><br>
+                <div class="center">
+                    <select id="C4_ThrottleFunction" name="C4_ThrottleFunction">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C4_SpeedLimitValueOfThrottle"><b>C4.1 Граничне значення швидкості ручки газу.</b> Діапазон
+                    від 0 до
+                    127:</label><br><br>
+                <div class="center"><input type="number" id="C4_SpeedLimitValueOfThrottle"
+                        name="C4_SpeedLimitValueOfThrottle" value="" min="0" max="127"></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C4_PercentageValueOfTheFirstGearSpeed"><b>C4.2 Відсоток потужності, що подається на початку
+                        руху</b>,
+                    від 0 до 100%:</label><br><br>
+                <div class="center"><input type="number" id="C4_PercentageValueOfTheFirstGearSpeed"
+                        name="C4_PercentageValueOfTheFirstGearSpeed" value="" min="0" max="100"></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C5_ControllerMaxCurrent"><b>C5. Максимальный струм контроллеру</b>:</label><br><br>
+                <div class="center"><select id="C5_ControllerMaxCurrent" name="C5_ControllerMaxCurrent">
+                        <option value="3">50%</option>
+                        <option value="4">67%</option>
+                        <option value="5">75%</option>
+                        <option value="6">80%</option>
+                        <option value="7">83%</option>
+                        <option value="8">87%</option>
+                        <option value="9">91%</option>
+                        <option value="10" selected>100%</option>
+                    </select></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C12_ControllerLowestVoltage"><b>C12. Зсув напруги вимикання контролера:</b></label><br><br>
+                <div class="center"><select id="C12_ControllerLowestVoltage" name="C12_ControllerLowestVoltage">
+                        <option value="0">Umin - 2В (Більший пробіг, менша служба АКБ)</option>
+                        <option value="1">Umin - 1,5В</option>
+                        <option value="2">Umin - 1В</option>
+                        <option value="3">Umin - 0.5В</option>
+                        <option value="4" selected>Umin. За замовчуванням</option>
+                        <option value="5">Umin + 0.5</option>
+                        <option value="6">Umin + 1В</option>
+                        <option value="7">Umin + 1,5(Менший пробіг, довша служба АКБ)</option>
+                    </select></div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C13_ControllerAbsBraking"><b>С13 – налаштування потужності рекуперації</b>
+                    (електрогальмування):
+                    <br>0 - рекуперацію вимкнено;
+                    <br>1 - мінімальний рівень;
+                    <br>2..4 - проміжні значення рекуперації;
+                    <br>5 - максимальний рівень рекуперації.</label><br><br>
+                <div class="center">
+                    <select id="C13_ControllerAbsBraking" name="C13_ControllerAbsBraking">
+                        <option value="0" selected>0 </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="C14_PasAdjustment"><b>C14 – спеціальне налаштування асистента PAS</b>, активне, коли P3 = 0.
+                    <br>1 – слабка допомога (приблизно 6/17/30/45/100% від повної потужності при
+                    Assist = 1/2/3/4/5 відповідно);
+                    <br>2 - середня (приблизно 12/22/40/55/100%);
+                    <br>3 - сильна (приблизно 17/30/45/66/100%).</label><br><br>
+                <div class="center">
+                    <select id="C14_PasAdjustment" name="C14_PasAdjustment">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div><br>
+
+
+            </td>
+        </tr>
+        <td>
+            <label for="C1_PasSensorSensitivity">
+                <div class="center"><b>Параметри велосипедисту для правильного підрахунку затрачених калорій:</b></div>
+            </label>
+        </td>
+        <tr>
+            <td>
+                <label for="SEX"><b>Стать</b>:
+                    <div class="center">
+                        <select id="SEX" name="SEX">
+                            <option value="0" selected>Чоловік </option>
+                            <option value="1">Жінка</option>
+                        </select>
+                    </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="weight"><b>Вага велосипедисту</b>,
+                    кг:</label><br><br>
+                <div class="center"><input type="number" id="weight" name="weight" value="" min="5" max="200"></div><br>
+            </td>
+        <tr>
+            <td>
+                <label for="Height"><b>Зріст велосипедисту</b>,
+                    см:</label><br><br>
+                <div class="center"><input type="number" id="Height" name="Height" value="" min="50" max="300"></div>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Age"><b>Вік велосипедисту</b>,
+                    років:</label><br><br>
+                <div class="center"><input type="number" id="Age" name="Age" value="" min="1" max="120"></div><br>
+            </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>
+                <label for="Age"><b>Поправочний коефіцієнт при визначенні калорій.</b>
+                    <br>За замовчуванням одиниця, підбирається як відношення показань
+                    фітнес-трекеру та цього дисплею:</label><br><br>
+                <div class="center"><input type="number" id="Age" name="Age" value="" min="1" max="120"></div><br>
+            </td>
+        </tr>
+        <tr>
+    </table>
+
+    <div class="center">
+        <br><button id="ButtonSave" type="submit" onclick="saveSettings()">Зберегти</button><br><br>
+    </div>
+
+    <script src="webSoket.js"></script>
+
+    <script>
+
+        var settings = {
+            powerFactor,                            // Множитель мощности для корректного отображения мощности. Не передается в контроллер
+            maxSpeedLimit,
+            wheelRimDiameter,
+            P1_MotorFeature,
+            P2_WheelSetSpeedPulse,
+            P3_PasControlMode,
+            P4_ThrottleActiveMode,
+            P5_BatteryMonitorModes,
+            C1_PasSensorSensitivity,
+            C2_MotorPhase,
+            C4_ThrottleFunction,
+            C4_SpeedLimitValueOfThrottle,
+            C4_PercentageValueOfTheFirstGearSpeed,
+            C5_ControllerMaxCurrent,
+            C12_ControllerLowestVoltage,
+            C13_ControllerAbsBraking,
+            C14_PasAdjustment
+        };
+
+
+
+        function send() {
+            websocket.send('{"getSettings":true}');
+        }
+
+        function getSettings(event) {
+            let jsonParseEvent = JSON.parse(event.data);
+            console.log(jsonParseEvent);
+            fillKeyInData(settings, jsonParseEvent);
+            function fillKeyInData(settings, JsonObject) {
+                for (let key in JsonObject) {
+                    if (typeof JsonObject[key] === "object") {
+                        fillKeyInData(settings[key], JsonObject[key]);
+                    } else {
+                        if (JsonObject.hasOwnProperty('C1_PasSensorSensitivity')) {
+                            settings[key] = JsonObject[key];
+                            let element = document.getElementById(key);
+                            if (element.type === 'checkbox') {
+                                element.checked = JsonObject[key];
+                            } else {
+                                element.value = JsonObject[key];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function saveSettings() {
+            if (document.getElementById("usedGPS").checked===true){
+            location.href = "../index.html?GPS=true";
+            }
+
+            for (let key in settings) {
+                let element = document.getElementById(key);
+                if (key === 'powerFactor')
+                    settings[key] = parseFloat(document.getElementById(key).value);
+                else if (element.type === 'checkbox')
+                    settings[key] = document.getElementById(key).checked;
+                else
+                    settings[key] = parseInt(document.getElementById(key).value);
+            }
+            console.log(JSON.stringify(settings));
+            sendData(JSON.stringify(settings));
+            alert('Настройки отправлены!');
+            location.href = "../index.html";
+        }
+    </script>
+</body>
+
+</html>

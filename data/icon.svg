@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="512px" height="512px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 512 512"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str10 {stroke:black;stroke-width:7;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str4 {stroke:green;stroke-width:7;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str9 {stroke:red;stroke-width:7;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str11 {stroke:#FF1E00;stroke-width:7;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str5 {stroke:green;stroke-width:7;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str7 {stroke:#09FF00;stroke-width:7;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str8 {stroke:red;stroke-width:7;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str6 {stroke:#EF7F1A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str3 {stroke:#2B2A29;stroke-width:24;stroke-miterlimit:22.9256}
+    .str2 {stroke:#59EB38;stroke-width:24;stroke-miterlimit:22.9256}
+    .str1 {stroke:#2B2A29;stroke-width:0;stroke-miterlimit:22.9256}
+    .str0 {stroke:#1F1B20;stroke-width:0;stroke-linecap:square;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil4 {fill:none}
+    .fil7 {fill:none;fill-rule:nonzero}
+    .fil10 {fill:black}
+    .fil3 {fill:#2D254F}
+    .fil1 {fill:#F74343}
+    .fil0 {fill:ivory}
+    .fil5 {fill:green;fill-opacity:0.501961}
+    .fil6 {fill:green;fill-rule:nonzero;fill-opacity:0.501961}
+    .fil9 {fill:#E63C24;fill-rule:nonzero;fill-opacity:0.501961}
+    .fil8 {fill:#EF7F1A;fill-rule:nonzero;fill-opacity:0.501961}
+    .fnt0 {font-weight:normal;font-size:74px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="1" width="514" height="514" rx="57" ry="57"/>
+  <g id="_3015695196368">
+   <g id="RedArrow">
+    <polygon class="fil1" points="362,67 313,185 265,303 234,285 202,267 282,167 "/>
+    <path class="fil1" d="M358 65l8 4c4,2 7,5 7,6l-53 90c0,1 -4,-1 -9,-3l-8 -4c-4,-2 -7,-5 -7,-6l53 -90c0,-1 4,1 9,3z"/>
+    <line class="fil2 str0" x1="265" y1="303" x2="202" y2= "267" />
+    <path class="fil2 str0" d="M202 267l102 -129c0,0 0,0 0,0l44 -75c1,-1 5,0 9,2l8 4c4,2 7,5 7,7l-47 79c0,0 0,0 0,0l-60 147"/>
+   </g>
+   <circle id="ArrowCircleCenter" class="fil3 str1" transform="matrix(-2.01535 0.540011 -0.540011 -2.01535 258.368 243.29)" r="15"/>
+  </g>
+  <path class="fil2 str2" d="M86 434c-48,-46 -75,-109 -75,-176 0,-135 110,-244 245,-244 135,0 245,109 245,244 0,66 -27,130 -75,176"/>
+  <line class="fil2 str3" x1="87" y1="429" x2="119" y2= "397" />
+  <line class="fil2 str3" x1="425" y1="429" x2="394" y2= "397" />
+  <line class="fil2 str3" x1="487" y1="321" x2="444" y2= "310" />
+  <line class="fil2 str3" x1="487" y1="198" x2="444" y2= "209" />
+  <line class="fil2 str3" x1="425" y1="91" x2="394" y2= "122" />
+  <line class="fil2 str3" x1="318" y1="29" x2="307" y2= "72" />
+  <line class="fil2 str3" x1="194" y1="29" x2="206" y2= "72" />
+  <line class="fil2 str3" x1="87" y1="91" x2="119" y2= "122" />
+  <line class="fil2 str3" x1="25" y1="198" x2="69" y2= "209" />
+  <line class="fil2 str3" x1="25" y1="321" x2="69" y2= "310" />
+  <g id="_1801574880704">
+   <path class="fil4 str4" d="M133 348c-2,-4 -4,-9 -4,-13 0,-15 12,-26 26,-26 15,0 26,12 26,26 0,5 -1,9 -4,13"/>
+   <path class="fil5 str4" d="M156 328c4,0 6,3 6,6 0,4 -3,6 -6,6 -4,0 -6,-3 -6,-6 0,-4 3,-6 6,-6z"/>
+   <line class="fil4 str5" x1="133" y1="348" x2="140" y2= "344" />
+   <line class="fil4 str5" x1="179" y1="347" x2="172" y2= "344" />
+   <line class="fil4 str5" x1="130" y1="330" x2="138" y2= "332" />
+   <line class="fil4 str5" x1="182" y1="330" x2="174" y2= "332" />
+   <line class="fil4 str5" x1="133" y1="348" x2="140" y2= "344" />
+   <line class="fil4 str5" x1="139" y1="315" x2="144" y2= "321" />
+   <line class="fil4 str5" x1="173" y1="315" x2="168" y2= "321" />
+   <line class="fil4 str5" x1="155" y1="309" x2="155" y2= "317" />
+   <line class="fil4 str5" x1="156" y1="335" x2="147" y2= "324" />
+   <path class="fil6 str4" d="M123 301l6 7 -2 2 10 3 -2 -10 -2 2 -6 -7 -4 3 0 0zm3 3m2 4m4 2m4 -3m-2 -4m-4 -2m-5 -2z"/>
+   <path class="fil7 str4" d="M133 348c-2,-4 -4,-9 -4,-13 0,-15 12,-26 26,-26 15,0 26,12 26,26 0,5 -1,9 -4,13"/>
+  </g>
+  <g id="_3015695177232">
+   <path class="fil7 str6" d="M114 238l-1 44m2 -20l7 0m5 -19l7 0 4 -5 25 0 8 7 8 0 0 6 6 -5 4 0 4 7 0 23 -4 8 -6 0 -5 -5 0 7 -4 3 -30 0 -10 -6 -10 0 -3 -3m0 1l0 -34m26 -11l0 -2m-10 -2l21 0m-32 11l-5 6"/>
+   <g>
+    <path id="LedCheckText" class="fil8" d="M136 267l3 1c0,1 -1,2 -2,3 -1,1 -2,1 -3,1 -2,0 -3,-1 -4,-2 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-5 1,-1 3,-2 4,-2 2,0 3,0 4,1 1,1 1,1 1,2l-3 1c0,-1 0,-1 -1,-2 0,0 -1,-1 -2,-1 -1,0 -2,0 -2,1 -1,1 -1,2 -1,3 0,2 0,3 1,3 1,1 1,1 2,1 1,0 1,0 2,-1 1,0 1,-1 1,-2zm5 5l0 -13 3 0 0 5 5 0 0 -5 3 0 0 13 -3 0 0 -6 -5 0 0 6 -3 0zm13 0l0 -13 10 0 0 2 -7 0 0 3 6 0 0 2 -6 0 0 4 7 0 0 2 -10 0zm20 -5l3 1c0,1 -1,2 -2,3 -1,1 -2,1 -3,1 -2,0 -3,-1 -4,-2 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-5 1,-1 3,-2 4,-2 2,0 3,0 4,1 1,1 1,1 1,2l-3 1c0,-1 0,-1 -1,-2 0,0 -1,-1 -2,-1 -1,0 -2,0 -2,1 -1,1 -1,2 -1,3 0,2 0,3 1,3 1,1 1,1 2,1 1,0 1,0 2,-1 1,0 1,-1 1,-2zm5 5l0 -13 3 0 0 6 5 -6 4 0 -5 5 5 8 -3 0 -4 -6 -2 2 0 4 -3 0z"/>
+   </g>
+  </g>
+  <path class="fil4 str7" d="M176 179l29 0m-43 -12c8,16 8,33 0,50 -51,-17 -51,-34 0,-50zm14 25l29 0m-29 13l29 0"/>
+  <path class="fil4 str8" d="M348 166l0 41m16 -32l-11 0m-4 33c3,0 6,3 6,6 0,3 -3,6 -6,6 -3,0 -6,-3 -6,-6 0,-3 3,-6 6,-6zm16 -21l-11 0m11 12l-11 0"/>
+  <g id="_3015695176208">
+   <path class="fil4 str9" d="M346 231c15,0 27,12 27,27 0,15 -12,27 -27,27 -15,0 -27,-12 -27,-27 0,-15 12,-27 27,-27zm-25 48c-5,-6 -8,-13 -8,-21 0,-8 3,-15 8,-21m50 0c5,6 8,13 8,21 0,8 -3,15 -8,21"/>
+   <path class="fil9 str10" d="M345 266l-1 -17 0 -7 5 0 0 7 -1 17 -3 0zm-1 8l0 -5 5 0 0 5 -5 0z"/>
+  </g>
+  <g id="_1801574912480">
+   <path class="fil7 str9" d="M319 310l67 0 0 38 -67 0 0 -38zm8 18l12 0m27 0l12 0m-6 7l0 -12"/>
+   <path class="fil7 str11" d="M332 308l0 -7m41 7l0 -7"/>
+  </g>
+  <text x="132" y="484"  class="fil10 fnt0">KT-LCD</text>
+ </g>
+</svg>

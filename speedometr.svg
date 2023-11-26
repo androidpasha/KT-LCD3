@@ -1,0 +1,2711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210.5mm" height="357mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21050 35700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str4 {stroke:#2B2A29;stroke-width:100;stroke-miterlimit:22.9256}
+    .str3 {stroke:#2B2A29;stroke-width:200;stroke-miterlimit:22.9256}
+    .str13 {stroke:#4FC419;stroke-width:400;stroke-miterlimit:22.9256}
+    .str7 {stroke:green;stroke-width:75;stroke-miterlimit:22.9256}
+    .str16 {stroke:white;stroke-width:75;stroke-miterlimit:22.9256}
+    .str2 {stroke:#D5D5D5;stroke-width:500;stroke-miterlimit:22.9256}
+    .str12 {stroke:#FF1E00;stroke-width:500;stroke-miterlimit:22.9256}
+    .str5 {stroke:green;stroke-width:150;stroke-miterlimit:22.9256}
+    .str11 {stroke:red;stroke-width:150;stroke-miterlimit:22.9256}
+    .str14 {stroke:white;stroke-width:150;stroke-miterlimit:22.9256}
+    .str1 {stroke:#2B2A29;stroke-width:20;stroke-miterlimit:22.9256}
+    .str19 {stroke:#FEFEFE;stroke-width:200;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str18 {stroke:white;stroke-width:200;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str17 {stroke:white;stroke-width:300;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str6 {stroke:green;stroke-width:150;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str9 {stroke:#09FF00;stroke-width:150;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str15 {stroke:white;stroke-width:150;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str10 {stroke:red;stroke-width:250;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str8 {stroke:#EF7F1A;stroke-width:150;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str0 {stroke:#1F1B20;stroke-width:20;stroke-linecap:square;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil9 {fill:none;fill-rule:nonzero}
+    .fil5 {fill:black}
+    .fil7 {fill:green}
+    .fil18 {fill:#077134}
+    .fil17 {fill:#0B5696}
+    .fil16 {fill:#0F4986}
+    .fil6 {fill:#17059C}
+    .fil12 {fill:#2483C7}
+    .fil3 {fill:#2B2A29}
+    .fil2 {fill:#2D254F}
+    .fil14 {fill:#4FC419}
+    .fil23 {fill:#6B6B6B}
+    .fil4 {fill:#7D7D7D}
+    .fil19 {fill:#83261E}
+    .fil20 {fill:#A72C21}
+    .fil22 {fill:#A82682}
+    .fil21 {fill:#AA3121}
+    .fil10 {fill:#EF7F1A}
+    .fil0 {fill:#F74343}
+    .fil15 {fill:#FEFEFE}
+    .fil8 {fill:green;fill-rule:nonzero}
+    .fil11 {fill:#E63C24;fill-rule:nonzero}
+    .fil13 {fill:#FEFEFE;fill-rule:nonzero}
+    .fnt8 {font-weight:normal;font-size:411px;font-family:'Arial'}
+    .fnt5 {font-weight:normal;font-size:423px;font-family:'Arial'}
+    .fnt2 {font-weight:bold;font-size:741px;font-family:'Arial'}
+    .fnt4 {font-weight:normal;font-size:847px;font-family:'Arial'}
+    .fnt3 {font-weight:normal;font-size:871px;font-family:'Arial'}
+    .fnt1 {font-weight:normal;font-size:1260px;font-family:'Arial'}
+    .fnt6 {font-weight:normal;font-size:1376px;font-family:'Arial'}
+    .fnt0 {font-weight:normal;font-size:1764px;font-family:'Arial'}
+    .fnt7 {font-weight:bold;font-size:2152px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="arrow">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="RedArrow">
+   <polygon class="fil0" points="4780,18703 8307,14905 11834,11106 12120,11394 12407,11682 8594,15192 "/>
+   <path class="fil0" d="M4813 18736l-71 -71c-39,-39 -51,-91 -26,-115l3029 -3016c25,-24 76,-13 115,27l71 71c39,39 51,91 26,115l-3029 3016c-25,24 -76,13 -115,-27z"/>
+   <line class="fil1 str0" x1="11835" y1="11108" x2="12409" y2= "11683" />
+   <path class="fil1 str0" d="M12409 11683l-4908 4521c-1,1 -2,2 -3,3l-2541 2531c-39,39 -103,39 -141,0l-71 -71c-39,-39 -39,-103 0,-141l2678 -2667c1,-1 2,-2 3,-3l4410 -4748"/>
+  </g>
+  <circle id="ArrowCircleCenter" class="fil2 str1" cx="10539" cy="12967" r="600"/>
+ </g>
+ <g id="Tablo">
+  <metadata id="CorelCorpID_1Corel-Layer"/>
+  <path class="fil1 str2" d="M3568 20160c-1961,-1888 -3068,-4491 -3068,-7210 0,-5536 4499,-10023 10050,-10023 5550,0 10050,4487 10050,10023 0,2719 -1107,5321 -3068,7210"/>
+  <g id="_2347231437808">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -7514.84 -5905.97)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">10</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231436144">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -7128.84 -2357)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">5</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231436976">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -5323.85 479)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">0</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231434160">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -5704.84 -9001.84)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">15</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231434384">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -2751 -10897)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">20</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231433104">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 874 -10903)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">25</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231433264">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 3704.84 -8997.84)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">30</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231433488">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 5511.84 -5902.97)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">35</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231430192">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 5529.84 -2357)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">40</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231430288">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 3693.84 471)">
+                  <text x="10525" y="17850"  class="fil3 fnt0">45</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2347231425168">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -1260 401)">
+                  <text x="10525" y="17850"  class="fil4 fnt1">km/h</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <line class="fil1 str3" x1="3606" y1="19899" x2="4906" y2= "18599" />
+  <line class="fil1 str3" x1="17471" y1="19900" x2="16171" y2= "18600" />
+  <line class="fil1 str3" x1="20009" y1="15505" x2="18233" y2= "15029" />
+  <line class="fil1 str3" x1="20009" y1="10430" x2="18233" y2= "10906" />
+  <line class="fil1 str3" x1="17472" y1="6035" x2="16172" y2= "7335" />
+  <line class="fil1 str3" x1="13077" y1="3497" x2="12601" y2= "5273" />
+  <line class="fil1 str3" x1="8002" y1="3497" x2="8478" y2= "5273" />
+  <line class="fil1 str3" x1="3607" y1="6034" x2="4907" y2= "7334" />
+  <line class="fil1 str3" x1="1069" y1="10429" x2="2845" y2= "10905" />
+  <line class="fil1 str3" x1="1069" y1="15504" x2="2845" y2= "15028" />
+  <line class="fil1 str4" x1="2796" y1="19232" x2="3626" y2= "18561" />
+  <line class="fil1 str4" x1="2184" y1="18392" x2="3079" y2= "17811" />
+  <line class="fil1 str4" x1="1662" y1="17493" x2="2613" y2= "17009" />
+  <line class="fil1 str4" x1="1237" y1="16545" x2="2233" y2= "16163" />
+  <line class="fil1 str4" x1="696" y1="14541" x2="1750" y2= "14374" />
+  <line class="fil1 str4" x1="585" y1="13508" x2="1650" y2= "13452" />
+  <line class="fil1 str4" x1="583" y1="12468" x2="1648" y2= "12525" />
+  <line class="fil1 str4" x1="689" y1="11435" x2="1743" y2= "11602" />
+  <line class="fil1 str4" x1="1222" y1="9429" x2="2218" y2= "9811" />
+  <line class="fil1 str4" x1="1643" y1="8478" x2="2593" y2= "8963" />
+  <line class="fil1 str4" x1="2161" y1="7577" x2="3055" y2= "8159" />
+  <line class="fil1 str4" x1="2770" y1="6735" x2="3599" y2= "7407" />
+  <line class="fil1 str4" x1="4234" y1="5264" x2="4905" y2= "6094" />
+  <line class="fil1 str4" x1="5074" y1="4652" x2="5655" y2= "5547" />
+  <line class="fil1 str4" x1="5973" y1="4130" x2="6457" y2= "5081" />
+  <line class="fil1 str4" x1="6921" y1="3705" x2="7303" y2= "4701" />
+  <line class="fil1 str4" x1="8925" y1="3164" x2="9092" y2= "4218" />
+  <line class="fil1 str4" x1="9958" y1="3053" x2="10014" y2= "4118" />
+  <line class="fil1 str4" x1="10998" y1="3051" x2="10941" y2= "4116" />
+  <line class="fil1 str4" x1="12031" y1="3157" x2="11864" y2= "4211" />
+  <line class="fil1 str4" x1="14037" y1="3690" x2="13655" y2= "4686" />
+  <line class="fil1 str4" x1="14988" y1="4111" x2="14503" y2= "5061" />
+  <line class="fil1 str4" x1="15889" y1="4629" x2="15308" y2= "5523" />
+  <line class="fil1 str4" x1="16731" y1="5238" x2="16059" y2= "6067" />
+  <line class="fil1 str4" x1="18202" y1="6702" x2="17372" y2= "7373" />
+  <line class="fil1 str4" x1="18814" y1="7542" x2="17919" y2= "8123" />
+  <line class="fil1 str4" x1="19336" y1="8441" x2="18385" y2= "8925" />
+  <line class="fil1 str4" x1="19761" y1="9389" x2="18765" y2= "9771" />
+  <line class="fil1 str4" x1="20302" y1="11393" x2="19248" y2= "11560" />
+  <line class="fil1 str4" x1="20413" y1="12426" x2="19348" y2= "12482" />
+  <line class="fil1 str4" x1="20415" y1="13466" x2="19350" y2= "13409" />
+  <line class="fil1 str4" x1="20309" y1="14499" x2="19255" y2= "14332" />
+  <line class="fil1 str4" x1="19776" y1="16505" x2="18780" y2= "16123" />
+  <line class="fil1 str4" x1="19355" y1="17456" x2="18405" y2= "16971" />
+  <line class="fil1 str4" x1="18837" y1="18357" x2="17943" y2= "17776" />
+  <line class="fil1 str4" x1="18228" y1="19199" x2="17399" y2= "18527" />
+  <line class="fil1 str4" x1="10971" y1="21826" x2="10916" y2= "20760" />
+  <line class="fil1 str4" x1="11905" y1="21731" x2="11739" y2= "20678" />
+  <line class="fil1 str3" x1="12825" y1="21540" x2="12549" y2= "20510" />
+  <line class="fil1 str4" x1="13719" y1="21254" x2="13337" y2= "20258" />
+  <line class="fil1 str4" x1="14578" y1="20875" x2="14094" y2= "19925" />
+  <line class="fil1 str4" x1="15393" y1="20409" x2="14813" y2= "19514" />
+  <line class="fil1 str4" x1="16155" y1="19860" x2="15484" y2= "19031" />
+  <line class="fil1 str4" x1="10032" y1="21822" x2="10088" y2= "20756" />
+  <line class="fil1 str4" x1="9099" y1="21720" x2="9266" y2= "20666" />
+  <line class="fil1 str3" x1="8181" y1="21521" x2="8458" y2= "20490" />
+  <line class="fil1 str4" x1="7289" y1="21227" x2="7672" y2= "20231" />
+  <line class="fil1 str4" x1="6433" y1="20841" x2="6918" y2= "19891" />
+  <line class="fil1 str4" x1="5622" y1="20368" x2="6203" y2= "19474" />
+  <line class="fil1 str4" x1="4865" y1="19813" x2="5536" y2= "18985" />
+ </g>
+ <g id="Odometr">
+  <metadata id="CorelCorpID_2Corel-Layer"/>
+  <rect class="fil1 str1" x="8699" y="9320" width="3823" height="1122"/>
+  <g id="_2347231425616">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -1636 -7504.84)">
+                  <text x="10525" y="17850" id="OdometrText" class="fil5 fnt1">00000</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="DayliOdometr">
+  <metadata id="CorelCorpID_3Corel-Layer"/>
+  <rect class="fil1 str1" x="8245" y="15525" width="4559" height="1122"/>
+  <g id="_2555436701200">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g transform="matrix(1 0 0 1 -2287.92 -1284.06)">
+               <text x="10525" y="17850" id="DayliOdometrText" class="fil5 fnt1">000.000</text>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="PAS">
+  <metadata id="CorelCorpID_4Corel-Layer"/>
+  <g id="_1765346786192">
+   <g id="PassText">
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1 0 0 1 1659.98 2281.99)">
+                   <text x="10525" y="17850"  class="fil6 fnt0">0</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1 0 0 1 -2443 2293.99)">
+                   <text x="10525" y="17850"  class="fil4 fnt0">PAS</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="LedCruise">
+  <metadata id="CorelCorpID_5Corel-Layer"/>
+  <g id="_1801574880704">
+   <path class="fil1 str5" d="M5496 16595c-95,-164 -145,-350 -145,-540 0,-597 484,-1080 1080,-1080 597,0 1080,484 1080,1080 0,190 -50,376 -145,540"/>
+   <path class="fil7 str5" d="M6431 15791c146,0 265,118 265,265 0,146 -118,265 -265,265 -146,0 -265,-118 -265,-265 0,-146 118,-265 265,-265z"/>
+   <line class="fil1 str6" x1="5496" y1="16595" x2="5778" y2= "16432" />
+   <line class="fil1 str6" x1="7382" y1="16568" x2="7095" y2= "16413" />
+   <line class="fil1 str6" x1="5367" y1="15868" x2="5689" y2= "15924" />
+   <line class="fil1 str6" x1="7495" y1="15868" x2="7174" y2= "15924" />
+   <line class="fil1 str6" x1="5496" y1="16595" x2="5778" y2= "16432" />
+   <line class="fil1 str6" x1="5737" y1="15228" x2="5947" y2= "15478" />
+   <line class="fil1 str6" x1="7125" y1="15228" x2="6916" y2= "15478" />
+   <line class="fil1 str6" x1="6366" y1="14977" x2="6386" y2= "15303" />
+   <line class="fil1 str6" x1="6431" y1="16055" x2="6058" y2= "15608" />
+   <path class="fil8 str7" d="M5071 14655l248 273 -77 70 403 133 -93 -414 -77 70 -248 -273 -155 140 -1 1zm124 137m85 172m163 102m155 -140m-85 -172m-163 -102m-201 -67z"/>
+   <path class="fil9 str5" d="M5496 16595c-95,-164 -145,-350 -145,-540 0,-597 484,-1080 1080,-1080 597,0 1080,484 1080,1080 0,190 -50,376 -145,540"/>
+  </g>
+ </g>
+ <g id="LedCheck">
+  <metadata id="CorelCorpID_6Corel-Layer"/>
+  <g id="_1856285954128">
+   <path class="fil9 str8" d="M4688 12102l-28 1800m83 -840l268 0m212 -794l271 -7 165 -205 1025 0 337 304 324 0 0 265 258 -205 179 0 172 284 0 933 -146 331 -232 0 -205 -218 -7 284 -159 132 -1237 7 -390 -265 -390 -7 -122 -132m20 52l-1 -1377m1086 -461l-3 -73m-417 -100l847 0m-1320 431l-215 253"/>
+   <g>
+    <g>
+     <g>
+      <g transform="matrix(1 0 0 1 -5328.97 -4395)">
+       <text x="10525" y="17850" id="LedCheckText" class="fil10 fnt2">CHECK</text>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="LedLight">
+  <metadata id="CorelCorpID_7Corel-Layer"/>
+  <path class="fil1 str9" d="M7241 9660l1191 0m-1746 -496c329,670 326,1349 -7,2037 -2075,-703 -2073,-1382 7,-2037zm556 1045l1191 0m-1200 539l1191 0"/>
+ </g>
+ <g id="LedTemperature">
+  <metadata id="CorelCorpID_8Corel-Layer"/>
+  <path class="fil1 str10" d="M14292 9121l0 1673m662 -1302l-462 0m-175 1348c141,0 255,111 255,248 0,137 -114,248 -255,248 -141,0 -255,-111 -255,-248 0,-137 114,-248 255,-248zm637 -868l-462 0m462 500l-462 0"/>
+ </g>
+ <g id="LedBrake">
+  <metadata id="CorelCorpID_9Corel-Layer"/>
+  <path class="fil1 str11" d="M14211 11797c608,0 1100,492 1100,1100 0,608 -493,1100 -1100,1100 -608,0 -1100,-492 -1100,-1100 0,-608 492,-1100 1100,-1100zm-1034 1968c-204,-243 -316,-550 -316,-868 0,-317 112,-625 316,-868m2068 0c204,243 316,550 316,868 0,317 -112,625 -316,868"/>
+  <path class="fil11" d="M14175 13215l-50 -709 0 -297 204 0 0 297 -47 709 -107 0zm-43 333l0 -187 189 0 0 187 -189 0z"/>
+ </g>
+ <g id="LedAkkumulator">
+  <metadata id="CorelCorpID_10Corel-Layer"/>
+  <g id="_1801574912480">
+   <path class="fil9 str11" d="M13099 15027l2753 0 0 1551 -2753 0 0 -1551zm321 732l493 0m1123 -11l496 3m-243 268l0 -507"/>
+   <path class="fil9 str12" d="M13635 14965l0 -303m1683 301l3 -277"/>
+  </g>
+ </g>
+ <g id="Battary">
+  <metadata id="CorelCorpID_11Corel-Layer"/>
+  <circle id="BattaryProgress" class="fil9 str13" cx="10539" cy="12967" r="10200"/>
+ </g>
+ <g id="ButtonMinus">
+  <metadata id="CorelCorpID_12Corel-Layer"/>
+  <g id="_1765325889216">
+   <circle class="fil12" cx="3160" cy="23623" r="2000"/>
+   <path class="fil13" d="M4339 23224l-1177 0 0 -410 -1177 820 1177 820 0 -410 1177 0 0 -820zm-589 0m-589 -205m-589 205m0 820m589 205m589 -205m589 -410z"/>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1 0 0 1 -7953.84 8677.84)">
+                   <text x="10525" y="17850"  class="fil5 fnt3">PAS</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ButtonPlus">
+  <metadata id="CorelCorpID_13Corel-Layer"/>
+  <g id="_1765325886304">
+   <circle class="fil12" cx="18210" cy="23623" r="2000"/>
+   <path class="fil13" d="M17032 24033l1177 0 0 410 1177 -820 -1177 -820 0 410 -1177 0 0 820zm589 0m589 205m589 -205m0 -820m-589 -205m-589 205m-589 410z"/>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1 0 0 1 7035.84 8677.84)">
+                   <text x="10525" y="17850"  class="fil5 fnt3">PAS</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ButtonCruise">
+  <metadata id="CorelCorpID_14Corel-Layer"/>
+  <g id="_1801670618400">
+   <circle id="ButtonCruise_circle" class="fil14" cx="8160" cy="23623" r="2000"/>
+   <g>
+    <path class="fil1 str14" d="M7049 24410c-113,-197 -172,-420 -172,-648 0,-715 574,-1295 1282,-1295 708,0 1282,580 1282,1295 0,227 -59,451 -172,648"/>
+    <path class="fil15 str14" d="M8160 23446c173,0 314,142 314,317 0,175 -141,317 -314,317 -173,0 -314,-142 -314,-317 0,-175 141,-317 314,-317z"/>
+    <line class="fil1 str15" x1="7049" y1="24410" x2="7385" y2= "24215" />
+    <line class="fil1 str15" x1="9288" y1="24378" x2="8947" y2= "24192" />
+    <line class="fil1 str15" x1="6897" y1="23538" x2="7278" y2= "23606" />
+    <line class="fil1 str15" x1="9423" y1="23538" x2="9041" y2= "23606" />
+    <line class="fil1 str15" x1="7049" y1="24410" x2="7385" y2= "24215" />
+    <line class="fil1 str15" x1="7336" y1="22771" x2="7585" y2= "23070" />
+    <line class="fil1 str15" x1="8984" y1="22771" x2="8735" y2= "23070" />
+    <line class="fil1 str15" x1="8083" y1="22470" x2="8106" y2= "22860" />
+    <line class="fil1 str15" x1="8160" y1="23763" x2="7717" y2= "23227" />
+    <path class="fil13 str16" d="M6545 22084l294 328 -92 84 478 160 -111 -496 -92 84 -294 -328 -183 168zm147 164m101 206m193 122m183 -168m-101 -206m-193 -122m-239 -80z"/>
+    <path class="fil9 str14" d="M7049 24410c-113,-197 -172,-420 -172,-648 0,-715 574,-1295 1282,-1295 708,0 1282,580 1282,1295 0,227 -59,451 -172,648"/>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1 0 0 1 -3442.88 8677.84)">
+                   <text x="10525" y="17850"  class="fil5 fnt3">Cruise</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="Button6km">
+  <metadata id="CorelCorpID_15Corel-Layer"/>
+  <g id="_1801670678944">
+   <g>
+    <circle id="Button6km_circle" class="fil14" cx="13160" cy="23623" r="2000"/>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1 0 0 1 1505 8683.84)">
+                    <text x="10525" y="17850"  class="fil5 fnt3">6 km/h</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <ellipse class="fil15" cx="13214" cy="22503" rx="261" ry="258"/>
+    <line class="fil1 str17" x1="13552" y1="24790" x2="12875" y2= "23715" />
+    <line class="fil1 str17" x1="12396" y1="24792" x2="12642" y2= "24428" />
+    <polygon class="fil15" points="12870,24220 12695,23972 12536,24322 12778,24494 "/>
+    <line class="fil1 str18" x1="12427" y1="23849" x2="12517" y2= "23294" />
+    <line class="fil1 str18" x1="12514" y1="23291" x2="12904" y2= "22979" />
+    <line class="fil1 str19" x1="13843" y1="23704" x2="13380" y2= "23482" />
+    <line class="fil1 str19" x1="13380" y1="23482" x2="13122" y2= "22949" />
+    <polygon class="fil15" points="12910,22880 13148,22854 13208,23439 13112,23806 12745,23661 "/>
+   </g>
+  </g>
+ </g>
+ <g id="Button_stop">
+  <metadata id="CorelCorpID_16Corel-Layer"/>
+  <g id="_1801670676544">
+   <circle class="fil12" cx="18113" cy="2400" r="2000"/>
+   <rect class="fil15" x="17313" y="1600" width="1600" height="1600"/>
+  </g>
+ </g>
+ <g id="Button_play">
+  <metadata id="CorelCorpID_17Corel-Layer"/>
+  <g id="_1801670676672">
+   <circle class="fil12" cx="2767" cy="2400" r="2000"/>
+   <path class="fil13" d="M2201 3531l0 -2263 1707 1131 -1707 1131 0 1zm0 -1131m853 -566m0 1131z"/>
+  </g>
+ </g>
+ <g id="V_AVG">
+  <metadata id="CorelCorpID_18Corel-Layer"/>
+  <path class="fil16" d="M1856 27250l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z"/>
+  <g id="_1801670673696">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g transform="matrix(1.01248 0 0 1 -7652.72 10259.8)">
+                <text x="10525" y="17850"  class="fil15 fnt4">V</text>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g transform="matrix(1.01248 0 0 1 -7164.08 10263.1)">
+                <text x="10525" y="17850"  class="fil15 fnt5">AVG</text>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349132134704">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g transform="matrix(1.01248 0 0 1 -5779.79 11471.5)">
+                <text x="10525" y="17850"  class="fil15 fnt5">км/ч</text>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349132156912">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g transform="matrix(1.01248 0 0 1 -8568.1 11538.7)">
+                <text x="10525" y="17850" id="VavgText" class="fil15 fnt6">00.0</text>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="V_max">
+  <metadata id="CorelCorpID_19Corel-Layer"/>
+  <path class="fil16" d="M6556 27250l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_1801670668992">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -2952.72 10259.8)">
+                    <text x="10525" y="17850"  class="fil15 fnt4">V</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -2492.43 10263.1)">
+                    <text x="10525" y="17850"  class="fil15 fnt5">MAX</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349132143664">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g transform="matrix(1.01248 0 0 1 -1074.91 11471.5)">
+                 <text x="10525" y="17850"  class="fil15 fnt5">км/ч</text>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349241023712">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1.01248 0 0 1 -3820.65 11538.7)">
+                  <text x="10525" y="17850" id="VmaxText" class="fil15 fnt6">00.0</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="t1">
+  <metadata id="CorelCorpID_20Corel-Layer"/>
+  <path class="fil17" d="M11256 27250l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349243957776">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 2123.17 10259.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">t</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349243958960">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 2470.52 10263.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">поездки</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349243956272">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 636.268 11507.4)">
+                   <text x="10525" y="17850" id="tDrive" class="fil15 fnt6">00:00</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="t2">
+  <metadata id="CorelCorpID_21Corel-Layer"/>
+  <path class="fil17" d="M15956 27250l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349243956848">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 6613.17 10259.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">t</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349243919664">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 7048.08 10263.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">общее</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349244031904">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 8804.84 11436)">
+                  <text x="10525" y="17850"  class="fil15 fnt5">Ч</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349243917200">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 5774.15 11538.7)">
+                   <text x="10525" y="17850" id="tAll" class="fil15 fnt6">000</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ODO1">
+  <metadata id="CorelCorpID_22Corel-Layer"/>
+  <path class="fil18" d="M1856 29880l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_1765339167120">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -9113.23 12889.8)">
+                    <text x="10525" y="17850"  class="fil15 fnt4">ODO</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -8289.93 13153.1)">
+                    <text x="10525" y="17850"  class="fil15 fnt5">после                                                      включения</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242674624">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -5440.18 14159.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">км</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349244026240">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1.01248 0 0 1 -8417.7 14238.7)">
+                  <text x="10525" y="17850" id="odoAfterPowerOn" class="fil15 fnt6">00.0</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ODO2">
+  <metadata id="CorelCorpID_23Corel-Layer"/>
+  <path class="fil18" d="M6556 29880l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_1765339159600">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -4513.23 12889.8)">
+                    <text x="10525" y="17850"  class="fil15 fnt4">ODO</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -2729.75 13113.1)">
+                    <text x="10525" y="17850"  class="fil15 fnt5">100% заряда</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242662816">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -744.672 14159.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">км</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349244022816">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1.01248 0 0 1 -3779.93 14177.2)">
+                  <text x="10525" y="17850" id="odoAfteCharging" class="fil15 fnt6">00.0</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ODO3">
+  <metadata id="CorelCorpID_24Corel-Layer"/>
+  <path class="fil18" d="M11256 29880l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349242644480">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 226.618 12889.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">ODO</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242645536">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 2284.23 13043.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">тех. обсл.</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242643200">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 3964.92 14159.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">км</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242643264">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 1114.15 14168.7)">
+                   <text x="10525" y="17850" id="odoAfterService" class="fil15 fnt6">000</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="ODO4">
+  <metadata id="CorelCorpID_25Corel-Layer"/>
+  <path class="fil18" d="M15956 29880l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349242641536">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 4976.62 12869.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">ODO</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242639424">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 6777.41 13133.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">смазка цепи</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242638368">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 8621.59 14159.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">км</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242635904">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 5774.15 14188.7)">
+                   <text x="10525" y="17850" id="odoAfterLubrication" class="fil15 fnt6">000</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="P">
+  <metadata id="CorelCorpID_26Corel-Layer"/>
+  <path class="fil19" d="M1856 32510l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_1765339130224">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -7652.72 15519.8)">
+                    <text x="10525" y="17850"  class="fil15 fnt4">P</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -7020.28 15523.1)">
+                    <text x="10525" y="17850"  class="fil15 fnt5">li-ion</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242699232">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -5486.02 16691.5)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">Вт</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242698048">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -8195.86 16804)">
+                   <text x="10525" y="17850" id="powerMomentary" class="fil15 fnt6">000</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="P_SUM">
+  <metadata id="CorelCorpID_27Corel-Layer"/>
+  <path class="fil19" d="M6556 32510l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_1765339123376">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -2952.72 15519.8)">
+                    <text x="10525" y="17850"  class="fil15 fnt4">P</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(1.01248 0 0 1 -2432.7 15523.1)">
+                    <text x="10525" y="17850"  class="fil15 fnt5">sum</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242696960">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -1124.51 16694.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">Вт*ч</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242693664">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 -3655.7 16798.7)">
+                   <text x="10525" y="17850" id="powerSum" class="fil15 fnt6">000</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="I">
+  <metadata id="CorelCorpID_28Corel-Layer"/>
+  <path class="fil20" d="M11256 32510l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349242692288">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 2123.17 15519.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">I</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242690848">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 2799.58 15523.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">li-ion</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242686944">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 4129.96 16691.5)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">А</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242687456">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 1007.53 16798.7)">
+                   <text x="10525" y="17850" id="powerCurrent" class="fil15 fnt6">00.0</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="U">
+  <metadata id="CorelCorpID_29Corel-Layer"/>
+  <path class="fil21" d="M15956 32510l3488 0c279,0 506,190 506,424l0 1653c0,233 -227,424 -506,424l-3488 0c-279,0 -506,-190 -506,-424l0 -1653c0,-233 227,-424 506,-424z" text-anchor="middle"/>
+  <g id="_2349242685632">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 6422.83 15519.8)">
+                   <text x="10525" y="17850"  class="fil15 fnt4">U</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242683264">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 7249.57 15523.1)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">li-ion</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242683136">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 8728.51 16691.5)">
+                   <text x="10525" y="17850"  class="fil15 fnt5">В</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="_2349242682432">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g transform="matrix(1.01248 0 0 1 5748.91 16798.7)">
+                   <text x="10525" y="17850" id="powerVoltage" class="fil15 fnt6">00.0</text>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="Clock">
+  <metadata id="CorelCorpID_30Corel-Layer"/>
+  <g id="_2349203818752">
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g transform="matrix(1 0 0 1 -4214.39 -15519.6)">
+                  <text x="10525" y="17850"  class="fil3 fnt7">00:00:00</text>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="arrow_AVG">
+  <metadata id="CorelCorpID_31Corel-Layer"/>
+  <g id="_1765339180688">
+   <path class="fil16" d="M5031 18825l-38 38c-39,39 -103,39 -142,-1l-182 -182c-39,-39 -39,-103 0,-142l38 -38c39,-39 103,-39 142,1l182 182c39,39 39,103 0,142z"/>
+   <path class="fil16" d="M5582 18275l-38 38c-39,39 -103,39 -142,-1l-182 -182c-39,-39 -40,-103 -1,-142l38 -38c39,-39 103,-39 142,1l182 182c39,39 40,103 1,142z"/>
+   <polygon class="fil16" points="4689,18517 5264,17944 5589,18269 5014,18842 "/>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(0.707917 -0.706296 0.706296 0.707917 -15105.5 13577.7)">
+                    <text x="10525" y="17850"  class="fil15 fnt8">AVG</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="GPS">
+  <metadata id="CorelCorpID_32Corel-Layer"/>
+  <g id="_1765339180688_0">
+   <path class="fil22" d="M5031 18825l-38 38c-39,39 -103,39 -142,-1l-182 -182c-39,-39 -39,-103 0,-142l38 -38c39,-39 103,-39 142,1l182 182c39,39 39,103 0,142z"/>
+   <path class="fil22" d="M5582 18275l-38 38c-39,39 -103,39 -142,-1l-182 -182c-39,-39 -40,-103 -1,-142l38 -38c39,-39 103,-39 142,1l182 182c39,39 40,103 1,142z"/>
+   <polygon class="fil22" points="4689,18517 5264,17944 5589,18269 5014,18842 "/>
+   <g>
+    <g>
+     <g>
+      <g>
+       <g>
+        <g>
+         <g>
+          <g>
+           <g>
+            <g>
+             <g>
+              <g>
+               <g>
+                <g>
+                 <g>
+                  <g>
+                   <g transform="matrix(0.707917 -0.706296 0.706296 0.707917 -15105.5 13577.7)">
+                    <text x="10525" y="17850"  class="fil15 fnt8">GPS</text>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="altitude">
+  <metadata id="CorelCorpID_33Corel-Layer"/>
+  <g id="_2236133136144">
+   <g transform="matrix(1 0 0 1 -1722 -9244.98)">
+    <text x="10525" y="17850"  class="fil23 fnt5">altitude</text>
+   </g>
+  </g>
+  <g id="_2236133202352">
+   <g transform="matrix(1 0 0 1 -357 -9244.98)">
+    <text x="10525" y="17850"  class="fil23 fnt5">:</text>
+   </g>
+  </g>
+  <g id="_2941864416160">
+   <g>
+    <g transform="matrix(1 0 0 1 -195.64 -9204.19)">
+     <text x="10525" y="17850" id="altitudeVal" class="fil23 fnt4">123</text>
+    </g>
+   </g>
+   <g>
+    <g transform="matrix(1 0 0 1 1217.36 -9204.19)">
+     <text x="10525" y="17850" id="altitudeVal_0" class="fil23 fnt4">m</text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
