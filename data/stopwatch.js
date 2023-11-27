@@ -33,8 +33,13 @@ function stopwatch(stopWatchStartMoment) {
 		const now = new Date();
 		const stopwatch = new Date(now - stopWatchStartMoment);
 		let stopwatchOption = { timeZone: "UTC", minute: '2-digit', second: "2-digit", fractionalSecondDigits: 1 }
-		if (stopwatch.getUTCHours() !== 0)
+		if (stopwatch.getUTCHours() !== 0) {
 			stopwatchOption.hour = '2-digit';
+			delete stopwatchOption.fractionalSecondDigits;
+		}
+
+
+
 		watch.textContent = stopwatch.toLocaleTimeString([], stopwatchOption).replace(',', '.');
 	}, 100);
 }

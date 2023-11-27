@@ -1,3 +1,4 @@
+//https://github.com/androidpasha/KT-LCD3
 #include <Arduino.h>
 #include "KTLCD_Display.h"
 #include "AverageValue.h"
