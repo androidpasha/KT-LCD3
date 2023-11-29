@@ -6,10 +6,7 @@ class AverageValue
 public:
   void measure(float currentValue)
   {
-    if (currentValue >= 3.0f)
-    {
       this->resultAverage = calculateAverage(currentValue);
-    }
   }
 
   void resetMaxValue()
@@ -28,7 +25,7 @@ public:
   float maxValue;
 
 private:
-  float calculateAverage(float currentValue)
+  float calculateAverage(float &currentValue)
   {
     if (maxValue < currentValue)
       maxValue = currentValue;
@@ -37,6 +34,6 @@ private:
     return sumValues / (float)numReadings;
   }
 
-  float sumValues = 0.0f;
-  int numReadings = 1;
+  float sumValues = 0.0F;
+  uint32_t numReadings = 1;
 };

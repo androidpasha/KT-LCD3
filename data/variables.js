@@ -33,8 +33,14 @@ let DATA = { //Объект с данными таблицы
         LedLight: 0,
         LedTemperature: 0,
     },
+    Cal: {
+        CalTotal: 0,
+        CalDrive: 0,
+        FatTotal: 0,
+        FatDrive: 0,
+    },
     PAS: 0,
     Button6km: 0,
-    assist:0,
-    throttle:0,
+    assist: 0,
+    throttle: 0,
 };

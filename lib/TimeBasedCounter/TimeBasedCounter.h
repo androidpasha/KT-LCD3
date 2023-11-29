@@ -34,7 +34,7 @@ private:
   float result;
   uint32_t lastMeasureTime;
 
-  float calculateResult(const float currentValue, const uint32_t &measureTime)
+  float calculateResult(const float &currentValue, const uint32_t &measureTime)
   {
     result += currentValue * measureTime / 3600.0f;
     return result;

@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "APIP",
         "bicycle",
+        "burn",
+        "Calories",
         "Diameter",
         "Diametr",
         "Gear",
@@ -11,7 +14,9 @@
         "perimeter",
         "pump",
         "Ticker",
-        "Voltage"
+        "velocity",
+        "Voltage",
+        "watt"
     ],
     "cmake.configureOnOpen": false
 }

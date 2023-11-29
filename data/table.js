@@ -24,10 +24,10 @@ setInterval(() => {
     powerCurrent.textContent = DATA.Power.current.toFixed(1);
     powerVoltage.textContent = DATA.Power.voltage.toFixed(1);
 
-    fatDrive.textContent = DATA.byte11CRC;
-    fatTotal.textContent = DATA.byte11;
-    calTotal.textContent=DATA.assist;
-    calDrive.textContent=DATA.trottle;
+    fatDrive.textContent = DATA.Cal.FatDrive.toFixed(1);
+    fatTotal.textContent = DATA.Cal.FatTotal.toFixed(1);
+    calTotal.textContent=DATA.Cal.CalTotal.toFixed(1);
+    calDrive.textContent=DATA.Cal.CalDrive.toFixed(1);
 
 }, interval);
 

@@ -75,7 +75,7 @@ typedef struct ReceiveDataStruct
     uint16_t temperature;
     bool throttle;
     bool cruise;
-    bool assistent;
+    bool assistant;
     byte brake;
     uint8_t error;        //(0x20 or 0x25 or 0x28): "0info", 0x21: "6info", 0x22: "1info", 0x23: "2info", 0x24: "3info",  0x26: "4info"
     uint8_t ratedVoltage; // 24,36,48V
@@ -123,7 +123,7 @@ public:
     void sendSettingsToController()
     {
         // Проверить ИФ!!!!!
-        if ((receiveData.cruise == true) && (receiveData.throttle == true) && (receiveData.assistent == true))
+        if ((receiveData.cruise == true) && (receiveData.throttle == true) && (receiveData.assistant == true))
             settings.cruise = false;
         fillTransferBuffer();
         sendBufferToController(transferBuffer, TRANSFER_BUFFER_SIZE);
@@ -242,7 +242,7 @@ private:
 
         receiveData.pasData = buffer[11];
         receiveData.pasDataForCRC = buffer[11] + added;
-        
+
         return true;
     }
 
@@ -258,7 +258,7 @@ private:
         receiveData.error = BYTE[5];
         receiveData.throttle = !bitRead(BYTE[7], 0);
         receiveData.cruise = bitRead(BYTE[7], 3);
-        receiveData.assistent = bitRead(BYTE[7], 4);
+        receiveData.assistant = bitRead(BYTE[7], 4);
         receiveData.brake = bitRead(BYTE[7], 5);
         receiveData.power = BYTE[8] * settings.powerFactor;
         receiveData.temperature = (int8_t)BYTE[9] + 15;
