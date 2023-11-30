@@ -384,15 +384,13 @@
             </td>
         </tr>
         <tr>
-        <tr>
-            <td>
-                <label for="Age"><b>Поправочний коефіцієнт при визначенні калорій.</b>
-                    <br>За замовчуванням одиниця, підбирається як відношення показань
-                    фітнес-трекеру та цього дисплею:</label><br><br>
-                <div class="center"><input type="number" id="Age" name="Age" value="" min="1" max="120"></div><br>
+            <td> <label for="cal_coefficient"><b>Поправочний коефіцієнт при визначенні калорій.</b>
+                    За замовчуванням одиниця, підбирається як відношення показань
+                    фітнес-трекеру та цього дисплею. Від 0.1 до 10:</label><br><br>
+                <div class="center"><input type="number" id="cal_coefficient" name="cal_coefficient" value="" min="1"
+                        max="25" step="any"></div><br>
             </td>
         </tr>
-        <tr>
     </table>
     <br>
     <a href="https://www.webintoapp.com/store/188618">Завантажити останню версію застосунку KT-LCD</a>
@@ -422,7 +420,14 @@
             C5_ControllerMaxCurrent,
             C12_ControllerLowestVoltage,
             C13_ControllerAbsBraking,
-            C14_PasAdjustment
+            C14_PasAdjustment,
+            Age,
+            weight,
+            Height,
+            SEX,
+            cal_coefficient
+
+
         };
 
 
@@ -455,23 +460,35 @@
         }
 
         function saveSettings() {
-            if (document.getElementById("usedGPS").checked===true){
-            location.href = "../index.html?GPS=true";
+            if (document.getElementById("usedGPS").checked === true) {
+                location.href = "../index.html?GPS=true";
             }
 
             for (let key in settings) {
                 let element = document.getElementById(key);
-                if (key === 'powerFactor')
+                if (key === 'powerFactor' || key === 'cal_coefficient')
                     settings[key] = parseFloat(document.getElementById(key).value);
                 else if (element.type === 'checkbox')
                     settings[key] = document.getElementById(key).checked;
                 else
                     settings[key] = parseInt(document.getElementById(key).value);
             }
-            console.log(JSON.stringify(settings));
-            sendData(JSON.stringify(settings));
-            alert('Настройки отправлены!');
-            location.href = "../index.html";
+            console.log(JSON.stringify(settings, null, 2));
+
+            let msg ="";
+            for (let key in settings) {
+                if (isNaN(settings[key]))
+                    msg += key + " = " + settings[key] + "\n";
+            }
+            if (msg != "")
+                alert("Невірні параметр:\n" + msg);
+            else {
+                if (confirm("Зберегти наступні налаштування? " + JSON.stringify(settings, null, 2))) {
+                    sendData(JSON.stringify(settings));
+                    alert('Настройки отправлены!');
+                    location.href = "../index.html";
+                }
+            }
         }
     </script>
 </body>

@@ -1,6 +1,6 @@
 #pragma once
 #include "Arduino.h"
-#define maxMeasureTime 1000
+#define maxMeasureTime 6000
 class TimeBasedCounter
 {
 public:

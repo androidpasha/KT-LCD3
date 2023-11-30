@@ -14,7 +14,7 @@ typedef struct SettingsStruct
     bool walkMode;
     bool frontLight;
     // float speedDivided;
-    uint8_t powerFactor;
+    float powerFactor;
     uint8_t maxSpeedLimit;
     uint16_t wheelRimDiameter;         // 6-28 inch and 700C
     uint8_t P1_MotorFeature : 8;       // Range：1-255.

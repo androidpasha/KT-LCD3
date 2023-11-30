@@ -47,6 +47,14 @@ document.querySelector("#P_SUM").addEventListener("click", () => {
     }
 });
 
+document.querySelector("#calTotal").addEventListener("click", () => {
+    if (confirm("Обнулити лічильник спалених калорій та жиру?")) {
+        websocket.send('{"resetCalories":0}'); 
+    }
+});
+
+
+
 document.querySelector("#LedCheck").addEventListener("click", () => {
     switch (DATA.ledsInTablo.LedCheck) {
         case 0: break;

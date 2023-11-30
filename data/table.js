@@ -24,10 +24,26 @@ setInterval(() => {
     powerCurrent.textContent = DATA.Power.current.toFixed(1);
     powerVoltage.textContent = DATA.Power.voltage.toFixed(1);
 
-    fatDrive.textContent = DATA.Cal.FatDrive.toFixed(1);
-    fatTotal.textContent = DATA.Cal.FatTotal.toFixed(1);
-    calTotal.textContent=DATA.Cal.CalTotal.toFixed(1);
-    calDrive.textContent=DATA.Cal.CalDrive.toFixed(1);
+    fatDrive.textContent = fixedValue(DATA.Cal.FatDrive);
+    fatTotal.textContent = fixedValue(DATA.Cal.FatTotal/1000);
+    calTotal.textContent=fixedValue(DATA.Cal.CalTotal/1000);
+    calDrive.textContent=fixedValue(DATA.Cal.CalDrive);
+
+    function fixedValue(value){
+        if (value <99)
+        return value.toFixed(1)
+        else 
+        return value.toFixed(0)
+    }
+
+// if (DATA.Cal.CalTotal<1000){
+//     calTotal.textContent=(DATA.Cal.CalTotal/1000).toFixed(1);
+// }
+// else{
+//     calTotal.textContent=(DATA.Cal.CalTotal/1000).toFixed(0); 
+// }
+//     calDrive.textContent=DATA.Cal.CalDrive.toFixed(0);
+
 
 }, interval);
 

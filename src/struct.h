@@ -25,8 +25,8 @@ struct SaveToFsStruct
 
 struct User
 {
-  uint8_t age, height, weight;
-  bool sex;
+  uint8_t age, height, weight, sex;
+  float cal_coefficient;
 };
 
 /*
