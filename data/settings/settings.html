@@ -31,7 +31,8 @@
             font-size: 1.25rem;
         }
 
-        #powerFactor {
+        #powerFactor,
+        #cal_coefficient {
             max-width: 80px;
         }
 
@@ -280,7 +281,7 @@
         </tr>
         <tr>
             <td>
-                <label for="C5_ControllerMaxCurrent"><b>C5. Максимальный струм контроллеру</b>:</label><br><br>
+                <label for="C5_ControllerMaxCurrent"><b>C5. Максимальний струм контроллера</b>:</label><br><br>
                 <div class="center"><select id="C5_ControllerMaxCurrent" name="C5_ControllerMaxCurrent">
                         <option value="3">50%</option>
                         <option value="4">67%</option>
@@ -348,7 +349,7 @@
         </tr>
         <td>
             <label for="C1_PasSensorSensitivity">
-                <div class="center"><b>Параметри велосипедисту для правильного підрахунку затрачених калорій:</b></div>
+                <div class="center"><b>Параметри велосипедиста для правильного підрахунку затрачених калорій:</b></div>
             </label>
         </td>
         <tr>
@@ -356,21 +357,21 @@
                 <label for="SEX"><b>Стать</b>:
                     <div class="center">
                         <select id="SEX" name="SEX">
-                            <option value="0" selected>Чоловік </option>
-                            <option value="1">Жінка</option>
+                            <option value="0" selected>Чоловіча </option>
+                            <option value="1">Жіноча</option>
                         </select>
                     </div><br>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="weight"><b>Вага велосипедисту</b>,
+                <label for="weight"><b>Вага велосипедиста</b>,
                     кг:</label><br><br>
                 <div class="center"><input type="number" id="weight" name="weight" value="" min="5" max="200"></div><br>
             </td>
         <tr>
             <td>
-                <label for="Height"><b>Зріст велосипедисту</b>,
+                <label for="Height"><b>Зріст велосипедиста</b>,
                     см:</label><br><br>
                 <div class="center"><input type="number" id="Height" name="Height" value="" min="50" max="300"></div>
                 <br>
@@ -378,7 +379,7 @@
         </tr>
         <tr>
             <td>
-                <label for="Age"><b>Вік велосипедисту</b>,
+                <label for="Age"><b>Вік велосипедиста</b>,
                     років:</label><br><br>
                 <div class="center"><input type="number" id="Age" name="Age" value="" min="1" max="120"></div><br>
             </td>
@@ -386,14 +387,17 @@
         <tr>
             <td> <label for="cal_coefficient"><b>Поправочний коефіцієнт при визначенні калорій.</b>
                     За замовчуванням одиниця, підбирається як відношення показань
-                    фітнес-трекеру та цього дисплею. Від 0.1 до 10:</label><br><br>
+                    фітнес-трекеру та цього дисплею при PAS = 0. Діапазон від 0.1 до 10:</label><br><br>
                 <div class="center"><input type="number" id="cal_coefficient" name="cal_coefficient" value="" min="1"
-                        max="25" step="any"></div><br>
+                        max="10" step="any"></div><br>
             </td>
         </tr>
     </table>
     <br>
     <a href="https://www.webintoapp.com/store/188618">Завантажити останню версію застосунку KT-LCD</a>
+    <br>
+    <br>
+    <a href="https://github.com/androidpasha/KT-LCD3">Сторінка проєкту на github</a>
     <br>
     <div class="center">
         <br><button id="ButtonSave" type="submit" onclick="saveSettings()">Зберегти</button><br><br>
@@ -485,12 +489,11 @@
             else {
                 if (confirm("Зберегти наступні налаштування? " + JSON.stringify(settings, null, 2))) {
                     sendData(JSON.stringify(settings));
-                    alert('Настройки отправлены!');
+                    alert('Налаштування відправлені!');
                     location.href = "../index.html";
                 }
             }
         }
     </script>
 </body>
-
 </html>

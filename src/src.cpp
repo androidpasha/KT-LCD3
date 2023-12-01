@@ -83,7 +83,6 @@ void setup()
   // SaveMeasureDataToLFS.writeToFile(measurementData);
 
   calories.reset(measurementData.energyCaloriesTotal);
-
   measurementData.afterPowerOn = measurementData.general;
   measurementData.energyCaloriesDrive = measurementData.energyCaloriesTotal;
   measurementData.burnFatDrive = measurementData.burnFatTotal;
@@ -149,15 +148,15 @@ bool bicycleIsAvailableData()
 
   if (dataAvailable == true)
   {
-    bicycle.receiveData.speed = 60.0;
+    bicycle.receiveData.speed = bicycle.receiveData.speed;
     if (bicycle.receiveData.speed >= 3.0f)
-      averageSpeed.measure(bicycle.receiveData.speed);
-    odometr.measure(60.0);
+    averageSpeed.measure(bicycle.receiveData.speed);
+    odometr.measure(bicycle.receiveData.speed);
     wattMeter.measure((float)bicycle.receiveData.power);
     measurementData.general = odometr.getResult();
     measurementData.wattMeter = (uint32_t)wattMeter.getResult();
 
-    if (bicycle.receiveData.assistant != true)
+    if (bicycle.receiveData.assistant == true)
       calories.measure(calculateCalories(userParameters, bicycle.receiveData.speed, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment));
     else
     {

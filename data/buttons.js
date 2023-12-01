@@ -20,7 +20,7 @@ document.querySelector("#Button6km").addEventListener("click", () => {
 
 setTimeout(function(){
 	document.querySelector('#settingsButton').style.display = 'none';
-}, 5000);
+}, 15000);
 
 // function displayPAS() {
 //     document.querySelector("#PasText").textContent = DATA.PAS;
