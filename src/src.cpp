@@ -49,7 +49,7 @@ SaveTemplateDataToLFS<User> SaveUserDataToLFS(userParameters, dataStorageFileNam
 bool scheduleFlag = false;
 uint32_t lastSaveToFsTime = 0;
 bool saveFlagMeasurementDataToFile = false;
-//bool clientConected;
+// bool clientConected;
 #pragma endregion
 #pragma region offsetof //function declarations
 float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint8_t pasAdjustment);
@@ -66,8 +66,8 @@ void setup()
   LittleFS.begin(); // Инициализируем работу с файловой системой
 
   WiFi.mode(WIFI_AP);
-//   WiFi.softAP(ssidAP);
-   WiFi.softAP(ssidAP, "", 1, 0, 1); // ссид, нет паспорта, канал, не скрывать ссид, макс одно подключение
+  //   WiFi.softAP(ssidAP);
+  WiFi.softAP(ssidAP, "", 1, 0, 1); // ссид, нет паспорта, канал, не скрывать ссид, макс одно подключение
   // dnsServer.start(53, "bicycle", WiFi.softAPIP()); // Переходим с любой страницы на IP точки доступа ESP8266
   // webServer.begin();                               // Инициализируем Web-сервер
   // WebServer();                                     // Функция обработки запросов
@@ -92,9 +92,9 @@ void setup()
 
 void loop()
 {
-    // dnsServer.processNextRequest(); // Переходим с любой страницы на IP точки доступа ESP8266
-    // webServer.handleClient();       // Обработчик HTTP-событий (отлавливает HTTP-запросы к устройству и обрабатывает их)
-    webSocket.loop();
+  // dnsServer.processNextRequest(); // Переходим с любой страницы на IP точки доступа ESP8266
+  // webServer.handleClient();       // Обработчик HTTP-событий (отлавливает HTTP-запросы к устройству и обрабатывает их)
+  webSocket.loop();
 
   if (scheduleFlag == true)
   {
@@ -103,7 +103,7 @@ void loop()
   }
   if (bicycleIsAvailableData() == true)
   {
-      webSocketSendBicycleDataToDisplay();
+    webSocketSendBicycleDataToDisplay();
 
     static uint32_t minNextTimeSaveOdometrDataToFile = millis();
     if (bicycle.receiveData.speed <= 3 and saveFlagMeasurementDataToFile == true and millis() > minNextTimeSaveOdometrDataToFile)
@@ -116,8 +116,8 @@ void loop()
     }
     else if (bicycle.receiveData.speed > 3)
       saveFlagMeasurementDataToFile = true;
-    //if (webSocket.connectedClients() > 1)
-      //webSocket.disconnect();
+    // if (webSocket.connectedClients() > 1)
+    // webSocket.disconnect();
   }
 }
 
@@ -126,15 +126,17 @@ float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint
   if (velocity < 1) // Формула для катання а не для відпочинку!!!
     velocity = 1;
 
-  float calories;
-  calories = ((10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex) * 0.34 * velocity + 1000.0) / 24; // in 60 minutes
-  // calories = ((10 * 73.6 + 6.25 * 173.3 - 5 * 52.2 + 5) * 0.34 * 19.6 + 1000.0) / 24.0; // in 60 minutes
-  calories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0); // урахування значення PAS
-  calories *= userParameters.cal_coefficient;
-  // String message = "pasAdjustment:" + String(pasAdjustment) +". pasLevel:"+ String(pasLevel) +"/ pgm_read:"+String(pgm_read_byte(&passToPercent[pasAdjustment-1][pasLevel]));
-
-  // webSocket.broadcastTXT(message);
-  return calories;
+  float basalMetabolicRate = (10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex); // базові витрати калорій людиною у спокої за добу
+  float addPhysicalActivityCalories = (basalMetabolicRate * 0.34 * velocity + 1000.0) - basalMetabolicRate;                   // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) за добу
+  addPhysicalActivityCalories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0);                           // урахування значення відсотків допомоги PAS
+  float sumCalories = basalMetabolicRate + addPhysicalActivityCalories;
+  sumCalories *= userParameters.cal_coefficient; // Поправка від користувача
+  sumCalories /= 24;                             // за годину
+  // float calories;
+  // calories = ((10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex) * 0.34 * velocity + 1000.0) / 24; // in 60 minutes
+  // calories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0);                                                                // урахування значення PAS
+  // calories *= userParameters.cal_coefficient;
+  return sumCalories;
 }
 
 void every100ms()
@@ -148,9 +150,9 @@ bool bicycleIsAvailableData()
 
   if (dataAvailable == true)
   {
-    bicycle.receiveData.speed = bicycle.receiveData.speed;
+    //    bicycle.receiveData.speed = 19.6;
     if (bicycle.receiveData.speed >= 3.0f)
-    averageSpeed.measure(bicycle.receiveData.speed);
+      averageSpeed.measure(bicycle.receiveData.speed);
     odometr.measure(bicycle.receiveData.speed);
     wattMeter.measure((float)bicycle.receiveData.power);
     measurementData.general = odometr.getResult();
@@ -160,9 +162,11 @@ bool bicycleIsAvailableData()
       calories.measure(calculateCalories(userParameters, bicycle.receiveData.speed, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment));
     else
     {
-      if (bicycle.receiveData.speed > 5)
-        calories.measure(calculateCalories(userParameters, 5, 0, 0));
-}
+      float velocity = bicycle.receiveData.speed;
+      if (velocity > 5)
+        velocity = 5;
+      calories.measure(calculateCalories(userParameters, velocity, 0, 0));
+    }
     measurementData.energyCaloriesTotal = calories.getResult();
     measurementData.burnFatTotal = measurementData.energyCaloriesTotal / 7.716;
   }
