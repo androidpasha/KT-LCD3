@@ -1,9 +1,18 @@
 // https://github.com/androidpasha/KT-LCD3
 #pragma region offsetof //includes libs
 #include <Arduino.h>
+
+//библиотеки собственной разработки:
 #include "KTLCD_Display.h"
 #include "AverageValue.h"
 #include "TimeBasedCounter.h"
+#include "SaveTemplateDataToLFS.h"
+#include "struct.h"
+#include "webSocketFunction.h" // функции веб сокета вынесены в отдельный файл
+// #include "webserverFunction.h" // функции веб сервера вынесены в отдельный файл
+// конец списка библиотек собственной разработки
+
+#include "Ticker.h"
 #include <ESP8266WiFi.h> // Библиотека для создания Wi-Fi подключения (клиент или точка доступа)
 // #include <DNSServer.h>
 // #include <ESP8266WebServer.h> // Библиотека для управления устройством по HTTP (например из браузера)
@@ -11,11 +20,6 @@
 #include <ArduinoJson.h>
 #include <FS.h> // Библиотека для работы с файловой системой
 #include <LittleFS.h>
-#include "SaveTemplateDataToLFS.h"
-#include "Ticker.h"
-#include "struct.h"
-#include "webSocketFunction.h" // функции веб сокета вынесены в отдельный файл
-// #include "webserverFunction.h" // функции веб сервера вынесены в отдельный файл
 #pragma endregion
 #pragma region offsetof //constants
 #define SERIAL1 // Закомментировать если будет использоваться обычный Serial (0)
@@ -49,7 +53,6 @@ SaveTemplateDataToLFS<User> SaveUserDataToLFS(userParameters, dataStorageFileNam
 bool scheduleFlag = false;
 uint32_t lastSaveToFsTime = 0;
 bool saveFlagMeasurementDataToFile = false;
-// bool clientConected;
 #pragma endregion
 #pragma region offsetof //function declarations
 float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint8_t pasAdjustment);
@@ -76,17 +79,11 @@ void setup()
 
   odometr.reset(measurementData.general);
   wattMeter.reset(measurementData.wattMeter);
-  // measurementData.energyCaloriesTotal = 0;
-  // measurementData.burnFatTotal = 0;
-  // measurementData.daily=0;
-  // measurementData.general=0;
-  // SaveMeasureDataToLFS.writeToFile(measurementData);
-
-  calories.reset(measurementData.energyCaloriesTotal);
+//обнуляем счетчики после включения
   measurementData.afterPowerOn = measurementData.general;
   measurementData.energyCaloriesDrive = measurementData.energyCaloriesTotal;
   measurementData.burnFatDrive = measurementData.burnFatTotal;
-
+//Вызываем функцию every100ms каждые 100 мс.
   scheduler_100ms.attach_ms(100, every100ms);
 }
 
@@ -150,23 +147,14 @@ bool bicycleIsAvailableData()
 
   if (dataAvailable == true)
   {
-    //    bicycle.receiveData.speed = 19.6;
     if (bicycle.receiveData.speed >= 3.0f)
       averageSpeed.measure(bicycle.receiveData.speed);
     odometr.measure(bicycle.receiveData.speed);
     wattMeter.measure((float)bicycle.receiveData.power);
+    calories.measure(calculateCalories(userParameters, bicycle.receiveData.speed, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment));
+
     measurementData.general = odometr.getResult();
     measurementData.wattMeter = (uint32_t)wattMeter.getResult();
-
-    if (bicycle.receiveData.assistant == true)
-      calories.measure(calculateCalories(userParameters, bicycle.receiveData.speed, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment));
-    else
-    {
-      float velocity = bicycle.receiveData.speed;
-      if (velocity > 5)
-        velocity = 5;
-      calories.measure(calculateCalories(userParameters, velocity, 0, 0));
-    }
     measurementData.energyCaloriesTotal = calories.getResult();
     measurementData.burnFatTotal = measurementData.energyCaloriesTotal / 7.716;
   }

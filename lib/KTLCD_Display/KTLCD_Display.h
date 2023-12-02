@@ -81,7 +81,7 @@ typedef struct ReceiveDataStruct
     uint8_t ratedVoltage; // 24,36,48V
     uint8_t batteryLevel; // 0: empty, 1: border flashing, 2: charging, 3: empty, 4: 1 bar, 8: 2 bars, 16: full
     uint8_t pasData;
-    int8_t pasDataForCRC;
+    //  int8_t pasDataForCRC;
     uint8_t batteryPercent()
     {
         uint8_t byteToPercent[2][6] = {
@@ -228,20 +228,24 @@ private:
         //  Если B11 >65 и B11 четное то B6 = CRC расч ^(B11-63)
         //  Если B11 >65 и B11 НЕ четное то B6 = CRC расч ^(B11-65)
         //  Если B11 == 65 то B6 == CRC расч
-        int8_t added;
-        if (buffer[11] < 65)
-            added = 63 + (!(buffer[11] % 2)) * 2;
-        else
-            added = -63 - (buffer[11] % 2) * 2;
+        /*        int8_t added;
+                if (buffer[11] < 65)
+                    added = 63 + (!(buffer[11] % 2)) * 2;
+                else
+                    added = -63 - (buffer[11] % 2) * 2;
 
-        uint8_t XOR11BYTE = XOR(buffer, bufferSize - 1, 6);
-        XOR11BYTE ^= (buffer[11] + added);
+                uint8_t XOR11BYTE = XOR(buffer, bufferSize - 1, 6);
+                XOR11BYTE ^= (buffer[11] + added);
 
-        if (XOR11BYTE != buffer[6] or bufferSum == 0) // последний байт буфера не рассчитывается в XOR, поэтому bufferSize - 1
+                if (XOR11BYTE != buffer[6] or bufferSum == 0) // последний байт буфера не рассчитывается в XOR, поэтому bufferSize - 1
+                    return false;
+        */
+        // костыль проверки подлинности пакета т.к. с xor что-то не так. [0] всегда 65 а [2] номинальное напряжение акб
+        bool crc = (buffer[0] == 65 and (buffer[2] == 24 or buffer[2] == 36 or buffer[2] == 48) and bufferSum != 0);
+        if (crc == false)
             return false;
 
-        receiveData.pasData = buffer[11];
-        receiveData.pasDataForCRC = buffer[11] + added;
+        // receiveData.pasDataForCRC = buffer[11] + added;
 
         return true;
     }
@@ -262,6 +266,7 @@ private:
         receiveData.brake = bitRead(BYTE[7], 5);
         receiveData.power = BYTE[8] * settings.powerFactor;
         receiveData.temperature = (int8_t)BYTE[9] + 15;
+        receiveData.pasData = BYTE[11];
 
 #undef BYTE
     }

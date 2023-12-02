@@ -111,6 +111,8 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       calories.reset();
       measurementData.energyCaloriesTotal = 0;
       measurementData.energyCaloriesDrive = 0;
+      measurementData.burnFatDrive=0;
+      measurementData.burnFatTotal=0;
       saveFlagMeasurementDataToFile = true;
     }
     else if (doc.containsKey("resetOdometerafterLubrication"))
