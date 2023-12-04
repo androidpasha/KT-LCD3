@@ -32,7 +32,7 @@
         }
 
         #powerFactor,
-        #cal_coefficient {
+        #calCorrectFactor {
             max-width: 80px;
         }
 
@@ -191,18 +191,16 @@
         <tr>
             <td>
                 <label for="C1_PasSensorSensitivity"><b>C1. Початкова чутливість до PAS.</b>
-                    <br>Від 0 до 2 для прямого та від 5 до
-                    7 для зворотного типу датчика:</label><br><br>
+                    <br> Оберіть чутливість при початку руху педалей:
+                    </label><br><br>
                 <div class="center">
                     <select id="C1_PasSensorSensitivity" name="C1_PasSensorSensitivity">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
+                        <option value="0">Висока. Датчик зліва </option>
+                        <option value="1">Середня. Датчик зліва</option>
+                        <option value="2">Низька. Датчик зліва</option>
+                        <option value="5">Висока. Датчик зправа</option>
+                        <option value="6">Середня. Датчик зправа</option>
+                        <option value="7">Низька. Датчик зправа</option>
                     </select>
                 </div><br>
             </td>
@@ -385,10 +383,10 @@
             </td>
         </tr>
         <tr>
-            <td> <label for="cal_coefficient"><b>Поправочний коефіцієнт при визначенні калорій.</b>
+            <td> <label for="calCorrectFactor"><b>Поправочний коефіцієнт при визначенні калорій.</b>
                     За замовчуванням одиниця, підбирається як відношення показань
                     фітнес-трекеру та цього дисплею при PAS = 0. Діапазон від 0.1 до 10:</label><br><br>
-                <div class="center"><input type="number" id="cal_coefficient" name="cal_coefficient" value="" min="1"
+                <div class="center"><input type="number" id="calCorrectFactor" name="calCorrectFactor" value="" min="1"
                         max="10" step="any"></div><br>
             </td>
         </tr>
@@ -429,7 +427,7 @@
             weight,
             Height,
             SEX,
-            cal_coefficient
+            calCorrectFactor
 
 
         };
@@ -470,7 +468,7 @@
 
             for (let key in settings) {
                 let element = document.getElementById(key);
-                if (key === 'powerFactor' || key === 'cal_coefficient')
+                if (key === 'powerFactor' || key === 'calCorrectFactor')
                     settings[key] = parseFloat(document.getElementById(key).value);
                 else if (element.type === 'checkbox')
                     settings[key] = document.getElementById(key).checked;

@@ -87,6 +87,7 @@ typedef struct ReceiveDataStruct
         uint8_t byteToPercent[2][6] = {
             {0, 1, 3, 4, 8, 16}, // 0: empty, 1: border flashing, 2: charging, 3: empty, 4: 1 bar, 8: 2 bars, 16: full
             {0, 10, 25, 50, 75, 100}};
+            //4>8?? не горит 1 лампа на АКБ
         for (int i = 0; i < 6; i++)
             if (batteryLevel == byteToPercent[0][i])
                 return byteToPercent[1][i];
@@ -255,6 +256,7 @@ private:
 #define BYTE buffer
         receiveData.batteryLevel = BYTE[1];
         receiveData.ratedVoltage = BYTE[2];
+        receiveData.ratedVoltage = BYTE[1];// Закоментировать после отладки!!!!
         receiveData.speedPeriod = (BYTE[3] << 8) | BYTE[4]; // BYTE[3] * 256 + BYTE[4];
         receiveData.speed = settings.onePeriodDistance() * 3600 / receiveData.speedPeriod;
         if (receiveData.speed < MINSPEED)

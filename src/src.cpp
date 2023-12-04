@@ -2,7 +2,7 @@
 #pragma region offsetof //includes libs
 #include <Arduino.h>
 
-//библиотеки собственной разработки:
+// библиотеки собственной разработки:
 #include "KTLCD_Display.h"
 #include "AverageValue.h"
 #include "TimeBasedCounter.h"
@@ -66,7 +66,7 @@ void setup()
 #ifdef SERIAL1
   Serial.swap(); // Переключаем аппаратный serial на другие пины
 #endif
-  LittleFS.begin(); // Инициализируем работу с файловой системой
+  //  LittleFS.begin(); // Инициализируем работу с файловой системой/ это сделано в SaveTemplateDataToLFS
 
   WiFi.mode(WIFI_AP);
   //   WiFi.softAP(ssidAP);
@@ -76,14 +76,14 @@ void setup()
   // WebServer();                                     // Функция обработки запросов
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
-
-  odometr.reset(measurementData.general);
+  // Устанавливаем начальное значение счетчиков
+  odometr.reset(measurementData.odoGeneral);
   wattMeter.reset(measurementData.wattMeter);
-//обнуляем счетчики после включения
-  measurementData.afterPowerOn = measurementData.general;
-  measurementData.energyCaloriesDrive = measurementData.energyCaloriesTotal;
-  measurementData.burnFatDrive = measurementData.burnFatTotal;
-//Вызываем функцию every100ms каждые 100 мс.
+  calories.reset(measurementData.caloriesTotal);
+  // обнуляем счетчики поездки после включения
+  measurementData.odoDrive = measurementData.odoGeneral;
+  measurementData.caloriesDrive = measurementData.caloriesTotal;
+  // Вызываем функцию every100ms каждые 100 мс.
   scheduler_100ms.attach_ms(100, every100ms);
 }
 
@@ -127,12 +127,12 @@ float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint
   float addPhysicalActivityCalories = (basalMetabolicRate * 0.34 * velocity + 1000.0) - basalMetabolicRate;                   // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) за добу
   addPhysicalActivityCalories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0);                           // урахування значення відсотків допомоги PAS
   float sumCalories = basalMetabolicRate + addPhysicalActivityCalories;
-  sumCalories *= userParameters.cal_coefficient; // Поправка від користувача
-  sumCalories /= 24;                             // за годину
+  sumCalories *= userParameters.calCorrectFactor; // Поправка від користувача
+  sumCalories /= 24;                              // за годину
   // float calories;
   // calories = ((10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex) * 0.34 * velocity + 1000.0) / 24; // in 60 minutes
   // calories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0);                                                                // урахування значення PAS
-  // calories *= userParameters.cal_coefficient;
+  // calories *= userParameters.calCorrectFactor;
   return sumCalories;
 }
 
@@ -151,12 +151,16 @@ bool bicycleIsAvailableData()
       averageSpeed.measure(bicycle.receiveData.speed);
     odometr.measure(bicycle.receiveData.speed);
     wattMeter.measure((float)bicycle.receiveData.power);
-    calories.measure(calculateCalories(userParameters, bicycle.receiveData.speed, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment));
 
-    measurementData.general = odometr.getResult();
-    measurementData.wattMeter = (uint32_t)wattMeter.getResult();
-    measurementData.energyCaloriesTotal = calories.getResult();
-    measurementData.burnFatTotal = measurementData.energyCaloriesTotal / 7.716;
+    float velocity = bicycle.receiveData.speed;
+    if (bicycle.receiveData.throttle == true and velocity < 5)
+      velocity = 5;
+    float cal = calculateCalories(userParameters, velocity, bicycle.settings.pasLevel, bicycle.settings.C14_PasAdjustment);
+    calories.measure(cal);
+
+    measurementData.odoGeneral = odometr.getResult();
+    measurementData.wattMeter = wattMeter.getResult();
+    measurementData.caloriesTotal = calories.getResult();
   }
   return dataAvailable;
 }

@@ -1,32 +1,33 @@
 #pragma once
 #include <Arduino.h>
+const float calKgRatio = 7.716179176;
 
 struct SaveToFsStruct
 {
   float
-      general,
-      daily,
-      afterPowerOn,
-      afterCharging,
-      afterService,
-      afterLubrication,
-      energyCaloriesTotal,
-      burnFatTotal,
-      energyCaloriesDrive,
-      burnFatDrive;
+      odoGeneral,
+      odoDaily,
+      odoDrive,
+      odoCharging,
+      odoService,
+      odoLubrication,
+      caloriesTotal,
+      caloriesDrive;
   uint32_t timeGeneral,
-      driveTime,
+      
       wattMeter;
-  void reset(int resetValue)
+  float fatTotal() { return caloriesTotal / calKgRatio; }
+  float fatDrive() { return (caloriesTotal - caloriesDrive) / calKgRatio; }
+  void reset(int startValue)
   {
-    general = daily = afterPowerOn = afterCharging = afterService = afterLubrication = resetValue;
+    odoGeneral = odoDaily = odoDrive = odoCharging = odoService = odoLubrication = startValue;
   }
 };
 
 struct User
 {
   uint8_t age, height, weight, sex;
-  float cal_coefficient;
+  float calCorrectFactor; //
 };
 
 /*

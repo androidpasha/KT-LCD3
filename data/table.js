@@ -20,7 +20,7 @@ setInterval(() => {
     odoAfterLubrication.textContent = km.toFixed(0);
 
     powerMomentary.textContent = DATA.Power.momentary.toFixed(0);
-    powerSum.textContent = DATA.Power.sum.toFixed(0);
+    powerSum.textContent = fixedValue(DATA.Power.sum);
     powerCurrent.textContent = DATA.Power.current.toFixed(1);
     powerVoltage.textContent = DATA.Power.voltage.toFixed(1);
 

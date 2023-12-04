@@ -34,25 +34,23 @@ void webSocketSendBicycleDataToDisplay()
     Velocity["Vmax"] = averageSpeed.maxValue;
 
     JsonObject Odometer = doc.createNestedObject("Odometer");
-    Odometer["general"] = measurementData.general / 1000.0f;
-    Odometer["afterPowerOn"] = measurementData.afterPowerOn / 1000.0f;
-    Odometer["afterCharging"] = measurementData.afterCharging / 1000.0f;
-    Odometer["afterService"] = measurementData.afterService / 1000.0f;
-    Odometer["afterLubrication"] = measurementData.afterLubrication / 1000.0f;
-    Odometer["daily"] = measurementData.daily / 1000.0f;
+    Odometer["general"] = measurementData.odoGeneral / 1000.0f;
+    Odometer["afterPowerOn"] = measurementData.odoDrive / 1000.0f;
+    Odometer["afterCharging"] = measurementData.odoCharging / 1000.0f;
+    Odometer["afterService"] = measurementData.odoService / 1000.0f;
+    Odometer["afterLubrication"] = measurementData.odoLubrication / 1000.0f;
+    Odometer["daily"] = measurementData.odoDaily / 1000.0f;
 
     JsonObject Cal = doc.createNestedObject("Cal");
-    Cal["CalTotal"] = measurementData.energyCaloriesTotal / 1000.0f;
-    Cal["CalDrive"] = (measurementData.energyCaloriesTotal - measurementData.energyCaloriesDrive) / 1000.0f;
-    Cal["FatTotal"] = measurementData.burnFatTotal / 1000.0f;
-    Cal["FatDrive"] = (measurementData.burnFatTotal - measurementData.burnFatDrive) / 1000.0f;
+    Cal["CalTotal"] = measurementData.caloriesTotal / 1000.0f;
+    Cal["CalDrive"] = (measurementData.caloriesTotal - measurementData.caloriesDrive) / 1000.0f;
+    Cal["FatTotal"] = measurementData.fatTotal() / 1000.0f;
+    Cal["FatDrive"] = measurementData.fatDrive() / 1000.0f;
 
     JsonObject Power = doc.createNestedObject("Power");
     Power["momentary"] = bicycle.receiveData.power;
     Power["sum"] = measurementData.wattMeter / 1000;
     uint8_t ratedVoltage = bicycle.receiveData.ratedVoltage;
-    if (ratedVoltage == 0)
-      ratedVoltage = 36;
     Power["current"] = bicycle.receiveData.power / ratedVoltage;
     Power["voltage"] = bicycle.receiveData.ratedVoltage;
     Power["BatteryPercent"] = bicycle.receiveData.batteryPercent();
@@ -95,11 +93,11 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       averageSpeed.resetMaxValue();
     else if (doc.containsKey("resetOdometerDaily"))
     {
-      measurementData.daily = measurementData.general;
+      measurementData.odoDaily = measurementData.odoGeneral;
       saveFlagMeasurementDataToFile = true;
     }
     else if (doc.containsKey("resetOdometerAfterCharging"))
-      measurementData.afterCharging = measurementData.general;
+      measurementData.odoCharging = measurementData.odoGeneral;
     else if (doc.containsKey("resetWattMeter"))
     {
       wattMeter.reset();
@@ -109,20 +107,18 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
     else if (doc.containsKey("resetCalories"))
     {
       calories.reset();
-      measurementData.energyCaloriesTotal = 0;
-      measurementData.energyCaloriesDrive = 0;
-      measurementData.burnFatDrive=0;
-      measurementData.burnFatTotal=0;
+      measurementData.caloriesTotal = 0;
+      measurementData.caloriesDrive = 0;
       saveFlagMeasurementDataToFile = true;
-    }
+      }
     else if (doc.containsKey("resetOdometerafterLubrication"))
     {
-      measurementData.afterLubrication = measurementData.general;
+      measurementData.odoLubrication = measurementData.odoGeneral;
       saveFlagMeasurementDataToFile = true;
     }
     else if (doc.containsKey("resetOdometerAfterService"))
     {
-      measurementData.afterService = measurementData.general;
+      measurementData.odoService = measurementData.odoGeneral;
       saveFlagMeasurementDataToFile = true;
     }
     else if (doc.containsKey("WalkMode"))
@@ -159,7 +155,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       userParameters.height = (uint8_t)doc["Height"];
       userParameters.sex = (bool)doc["SEX"];
       userParameters.weight = (uint8_t)doc["weight"];
-      userParameters.cal_coefficient = doc["cal_coefficient"];
+      userParameters.calCorrectFactor = doc["calCorrectFactor"];
 
       SaveUserDataToLFS.writeToFile(userParameters);
       SaveControllerDataToLFS.writeToFile(*BS);
@@ -189,7 +185,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       doc["Height"] = userParameters.height;
       doc["weight"] = userParameters.weight;
       doc["SEX"] = userParameters.sex;
-      doc["cal_coefficient"] = userParameters.cal_coefficient;
+      doc["calCorrectFactor"] = userParameters.calCorrectFactor;
       
 
       String jsonData;
