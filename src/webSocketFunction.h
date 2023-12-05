@@ -15,7 +15,7 @@ extern SaveToFsStruct measurementData;
 extern User userParameters;
 extern WebSocketsServer webSocket;
 extern bool saveFlagMeasurementDataToFile;
-//extern bool clientConected;
+// extern bool clientConected;
 extern TimeBasedCounter odometr;
 extern TimeBasedCounter wattMeter;
 extern TimeBasedCounter calories;
@@ -24,58 +24,59 @@ extern SaveTemplateDataToLFS<User> SaveUserDataToLFS;
 
 void webSocketSendBicycleDataToDisplay()
 {
-  // if (clientConected == true)
-  // {
+  StaticJsonDocument<900> doc;
+  
+  JsonObject Velocity = doc.createNestedObject("Velocity");
+  Velocity["Current_speed"] = bicycle.receiveData.speed; // bicycle.receiveData.speed; // random(10,45);
+  Velocity["avg"] = averageSpeed.resultAverage;
+  Velocity["Vmax"] = averageSpeed.maxValue;
 
-    StaticJsonDocument<700> doc;
-    JsonObject Velocity = doc.createNestedObject("Velocity");
-    Velocity["Current_speed"] = bicycle.receiveData.speed; // bicycle.receiveData.speed; // random(10,45);
-    Velocity["avg"] = averageSpeed.resultAverage;
-    Velocity["Vmax"] = averageSpeed.maxValue;
+  JsonObject Odometer = doc.createNestedObject("Odometer");
+  Odometer["general"] = measurementData.odoGeneral / 1000.0f;
+  Odometer["afterPowerOn"] = measurementData.odoDrive / 1000.0f;
+  Odometer["afterCharging"] = measurementData.odoCharging / 1000.0f;
+  Odometer["afterService"] = measurementData.odoService / 1000.0f;
+  Odometer["afterLubrication"] = measurementData.odoLubrication / 1000.0f;
+  Odometer["daily"] = measurementData.odoDaily / 1000.0f;
 
-    JsonObject Odometer = doc.createNestedObject("Odometer");
-    Odometer["general"] = measurementData.odoGeneral / 1000.0f;
-    Odometer["afterPowerOn"] = measurementData.odoDrive / 1000.0f;
-    Odometer["afterCharging"] = measurementData.odoCharging / 1000.0f;
-    Odometer["afterService"] = measurementData.odoService / 1000.0f;
-    Odometer["afterLubrication"] = measurementData.odoLubrication / 1000.0f;
-    Odometer["daily"] = measurementData.odoDaily / 1000.0f;
+  JsonObject Cal = doc.createNestedObject("Cal");
+  Cal["CalTotal"] = measurementData.caloriesTotal / 1000.0f;
+  Cal["CalDrive"] = (measurementData.caloriesTotal - measurementData.caloriesDrive) / 1000.0f;
+  Cal["FatTotal"] = measurementData.fatTotal() / 1000.0f;
+  Cal["FatDrive"] = measurementData.fatDrive() / 1000.0f;
 
-    JsonObject Cal = doc.createNestedObject("Cal");
-    Cal["CalTotal"] = measurementData.caloriesTotal / 1000.0f;
-    Cal["CalDrive"] = (measurementData.caloriesTotal - measurementData.caloriesDrive) / 1000.0f;
-    Cal["FatTotal"] = measurementData.fatTotal() / 1000.0f;
-    Cal["FatDrive"] = measurementData.fatDrive() / 1000.0f;
+  JsonObject Power = doc.createNestedObject("Power");
+  Power["momentary"] = bicycle.receiveData.power;
+  Power["sum"] = measurementData.wattMeter / 1000;
+  uint8_t ratedVoltage = bicycle.receiveData.ratedVoltage;
+  Power["current"] = bicycle.receiveData.power / ratedVoltage;
+  Power["voltage"] = bicycle.receiveData.ratedVoltage;
+  Power["BatteryPercent"] = bicycle.receiveData.batteryPercent();
 
-    JsonObject Power = doc.createNestedObject("Power");
-    Power["momentary"] = bicycle.receiveData.power;
-    Power["sum"] = measurementData.wattMeter / 1000;
-    uint8_t ratedVoltage = bicycle.receiveData.ratedVoltage;
-    Power["current"] = bicycle.receiveData.power / ratedVoltage;
-    Power["voltage"] = bicycle.receiveData.ratedVoltage;
-    Power["BatteryPercent"] = bicycle.receiveData.batteryPercent();
+  JsonObject driveTime = doc.createNestedObject("driveTime");
+  driveTime["drive"] = millis();
+  driveTime["all"] = (measurementData.timeGeneral + (millis() - lastSaveToFsTime) / 1000) / 60 / 60; // in hour
 
-    JsonObject driveTime = doc.createNestedObject("driveTime");
-    driveTime["drive"] = millis();
-    driveTime["all"] = (measurementData.timeGeneral + (millis() - lastSaveToFsTime) / 1000) / 60 / 60; // in hour
+  JsonObject ledsInTablo = doc.createNestedObject("ledsInTablo");
+  ledsInTablo["LedCruise"] = bicycle.settings.cruise; // bicycle.receiveData.cruise;// bicycle.settings.cruise;
+  ledsInTablo["LedBrake"] = bicycle.receiveData.brake;
+  ledsInTablo["LedCheck"] = bicycle.receiveData.error;
+  bicycle.receiveData.batteryLevel == 1 ? ledsInTablo["LedAkkumulator"] = true : ledsInTablo["LedAkkumulator"] = false;
+  bicycle.receiveData.temperature > 70 ? ledsInTablo["LedTemperature"] = true : ledsInTablo["LedTemperature"] = false;
 
-    JsonObject ledsInTablo = doc.createNestedObject("ledsInTablo");
-    ledsInTablo["LedCruise"] = bicycle.settings.cruise; // bicycle.receiveData.cruise;// bicycle.settings.cruise;
-    ledsInTablo["LedBrake"] = bicycle.receiveData.brake;
-    ledsInTablo["LedCheck"] = bicycle.receiveData.error;
-    bicycle.receiveData.batteryLevel == 1 ? ledsInTablo["LedAkkumulator"] = true : ledsInTablo["LedAkkumulator"] = false;
-    bicycle.receiveData.temperature > 70 ? ledsInTablo["LedTemperature"] = true : ledsInTablo["LedTemperature"] = false;
+  doc["throttle"] = bicycle.receiveData.throttle;
+  doc["assist"] = bicycle.receiveData.assistant;
+  doc["PAS"] = bicycle.settings.pasLevel;
+  doc["Button6km"] = bicycle.settings.walkMode;
+  doc["freeHeap"] = ESP.getFreeHeap();
 
-    doc["throttle"] = bicycle.receiveData.throttle;
-    doc["assist"] = bicycle.receiveData.assistant;
-    doc["PAS"] = bicycle.settings.pasLevel;
-    doc["Button6km"] = bicycle.settings.walkMode;
-    doc["freeHeap"] = ESP.getFreeHeap();
+  JsonObject inArr = doc.createNestedObject("inArr");
+  for (int i = 0; i < 12; i++)
+    inArr["iB" + String(i)] = bicycle.receiveBuffer[i];
 
-    String jsonData;
-    serializeJson(doc, jsonData);
-    webSocket.broadcastTXT(jsonData);
-  // }
+  String jsonData;
+  serializeJson(doc, jsonData);
+  webSocket.broadcastTXT(jsonData);
 }
 
 void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
@@ -110,7 +111,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       measurementData.caloriesTotal = 0;
       measurementData.caloriesDrive = 0;
       saveFlagMeasurementDataToFile = true;
-      }
+    }
     else if (doc.containsKey("resetOdometerafterLubrication"))
     {
       measurementData.odoLubrication = measurementData.odoGeneral;
@@ -150,7 +151,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       BS->C12_ControllerLowestVoltage = (uint8_t)doc["C12_ControllerLowestVoltage"];
       BS->C13_ControllerAbsBraking = (uint8_t)doc["C13_ControllerAbsBraking"];
       BS->C14_PasAdjustment = (uint8_t)doc["C14_PasAdjustment"];
- 
+
       userParameters.age = (uint8_t)doc["Age"]; //
       userParameters.height = (uint8_t)doc["Height"];
       userParameters.sex = (bool)doc["SEX"];
@@ -186,12 +187,11 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       doc["weight"] = userParameters.weight;
       doc["SEX"] = userParameters.sex;
       doc["calCorrectFactor"] = userParameters.calCorrectFactor;
-      
 
       String jsonData;
       serializeJson(doc, jsonData);
-      //if (clientConected == true)
-        webSocket.broadcastTXT(jsonData);
+      // if (clientConected == true)
+      webSocket.broadcastTXT(jsonData);
     }
   }
 }

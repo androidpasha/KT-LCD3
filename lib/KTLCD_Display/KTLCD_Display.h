@@ -80,14 +80,14 @@ typedef struct ReceiveDataStruct
     uint8_t error;        //(0x20 or 0x25 or 0x28): "0info", 0x21: "6info", 0x22: "1info", 0x23: "2info", 0x24: "3info",  0x26: "4info"
     uint8_t ratedVoltage; // 24,36,48V
     uint8_t batteryLevel; // 0: empty, 1: border flashing, 2: charging, 3: empty, 4: 1 bar, 8: 2 bars, 16: full
-    uint8_t pasData;
+    uint8_t cadencePeriod;
     //  int8_t pasDataForCRC;
     uint8_t batteryPercent()
     {
         uint8_t byteToPercent[2][6] = {
             {0, 1, 3, 4, 8, 16}, // 0: empty, 1: border flashing, 2: charging, 3: empty, 4: 1 bar, 8: 2 bars, 16: full
             {0, 10, 25, 50, 75, 100}};
-            //4>8?? не горит 1 лампа на АКБ
+            //4=50 (-2LED), 8=75 (-1LED)
         for (int i = 0; i < 6; i++)
             if (batteryLevel == byteToPercent[0][i])
                 return byteToPercent[1][i];
@@ -138,9 +138,9 @@ public:
         }
         return false;
     }
-
+uint8_t *receiveBuffer = new uint8_t[RECEIVE_BUFFER_SIZE];
 private:
-    uint8_t *receiveBuffer = new uint8_t[RECEIVE_BUFFER_SIZE];
+  //  uint8_t *receiveBuffer = new uint8_t[RECEIVE_BUFFER_SIZE];
     uint8_t *transferBuffer = new uint8_t[TRANSFER_BUFFER_SIZE];
 
     bool getReceivedBufferFromController()
@@ -256,8 +256,8 @@ private:
 #define BYTE buffer
         receiveData.batteryLevel = BYTE[1];
         receiveData.ratedVoltage = BYTE[2];
-        receiveData.ratedVoltage = BYTE[1];// Закоментировать после отладки!!!!
-        receiveData.speedPeriod = (BYTE[3] << 8) | BYTE[4]; // BYTE[3] * 256 + BYTE[4];
+        //receiveData.ratedVoltage = 6*1000/(BYTE[11]-65);// Закомментировать после отладки!!!!
+        receiveData.speedPeriod = (BYTE[3] << 8) | BYTE[4];
         receiveData.speed = settings.onePeriodDistance() * 3600 / receiveData.speedPeriod;
         if (receiveData.speed < MINSPEED)
             receiveData.speed = 0;
@@ -268,7 +268,7 @@ private:
         receiveData.brake = bitRead(BYTE[7], 5);
         receiveData.power = BYTE[8] * settings.powerFactor;
         receiveData.temperature = (int8_t)BYTE[9] + 15;
-        receiveData.pasData = BYTE[11];
+        receiveData.cadencePeriod = BYTE[11];
 
 #undef BYTE
     }

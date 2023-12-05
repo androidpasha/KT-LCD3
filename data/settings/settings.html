@@ -192,7 +192,7 @@
             <td>
                 <label for="C1_PasSensorSensitivity"><b>C1. Початкова чутливість до PAS.</b>
                     <br> Оберіть чутливість при початку руху педалей:
-                    </label><br><br>
+                </label><br><br>
                 <div class="center">
                     <select id="C1_PasSensorSensitivity" name="C1_PasSensorSensitivity">
                         <option value="0">Висока. Датчик зліва </option>
@@ -391,6 +391,7 @@
             </td>
         </tr>
     </table>
+
     <br>
     <a href="https://www.webintoapp.com/store/188618">Завантажити останню версію застосунку KT-LCD</a>
     <br>
@@ -399,6 +400,14 @@
     <br>
     <div class="center">
         <br><button id="ButtonSave" type="submit" onclick="saveSettings()">Зберегти</button><br><br>
+    </div>
+    <br>
+    <div id="engineeringText" style = "color:blue">Info.</div>
+    <br>
+
+    <div id=engineeringTable style="display:none">
+        <h4> Масив, що надсилає контроллер до LCD:</h4>
+        <table id="inputByteArraytable"></table>
     </div>
 
     <script src="webSoket.js"></script>
@@ -439,8 +448,9 @@
         }
 
         function getSettings(event) {
+            console.log(event);
             let jsonParseEvent = JSON.parse(event.data);
-            console.log(jsonParseEvent);
+
             fillKeyInData(settings, jsonParseEvent);
             function fillKeyInData(settings, JsonObject) {
                 for (let key in JsonObject) {
@@ -456,6 +466,9 @@
                                 element.value = JsonObject[key];
                             }
                         }
+                        if (JsonObject.hasOwnProperty('iB0'))
+                            document.getElementById(key).textContent = JsonObject[key];
+
                     }
                 }
             }
@@ -477,7 +490,7 @@
             }
             console.log(JSON.stringify(settings, null, 2));
 
-            let msg ="";
+            let msg = "";
             for (let key in settings) {
                 if (isNaN(settings[key]))
                     msg += key + " = " + settings[key] + "\n";
@@ -493,5 +506,44 @@
             }
         }
     </script>
+
+    <script> //Інженерна інформація
+    setTimeout(function(){
+        document.querySelector('#engineeringText').style.display = 'none';
+    }, 5000);
+
+        let byteTable = document.querySelector('#inputByteArraytable');
+        let NameColum = ['65', 'BAT', 'U, B', 'Speed', 'Speed', 'error', 'crc', 'LEDs', 'P, W', 'T,\'C', '0', 'Сadence',];
+
+        for (let row = 0; row < 3; row++) {// создаю таблицу информации
+            let tr = document.createElement('tr');
+
+            for (let colum = 0; colum < 12; colum++) {
+                let td = document.createElement('td');
+
+                if (row === 0)
+                    td.textContent = 'B' + colum;
+                else if (row === 1){
+                    td.textContent = NameColum[colum]
+                    td.style.writingMode = "vertical-rl"
+                    
+                }
+                else
+                    td.id = "iB" + colum;
+
+                td.style.textAlign = "center";
+                tr.appendChild(td);
+            }
+            byteTable.appendChild(tr);
+        }
+
+        const button = document.querySelector('#engineeringText');
+        button.addEventListener('click', engineeringTableDisplay);
+        function engineeringTableDisplay() {
+            document.getElementById("engineeringTable").style.display = "block";
+        };
+
+    </script>
 </body>
+
 </html>
