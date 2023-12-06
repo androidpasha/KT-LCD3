@@ -52,10 +52,10 @@
         }
 
         th,
-        td {
+        td{
             border: 2px solid black;
             padding: 8px;
-            text-align: left;
+            text-align: justify;
         }
 
         .center {
@@ -513,26 +513,46 @@
     }, 5000);
 
         let byteTable = document.querySelector('#inputByteArraytable');
-        let NameColum = ['65', 'BAT', 'U, B', 'Speed', 'Speed', 'error', 'crc', 'LEDs', 'P, W', 'T,\'C', '0', 'Сadence',];
+        let NameColum = ['Start byte', 'Battary', 'Voltage', 'Speed_H', 'Speed_L', 'Error', 'CRC', 'LEDs', 'Power', 'Temperature', 'Сadence_H', 'Сadence_L',];
 
-        for (let row = 0; row < 3; row++) {// создаю таблицу информации
+        for (let row = 0; row < 12; row++) {// создаю таблицу информации
             let tr = document.createElement('tr');
 
-            for (let colum = 0; colum < 12; colum++) {
+            for (let colum = 0; colum < 3; colum++) {
                 let td = document.createElement('td');
+                switch (colum){
+    case 0:
+    td.style.width = '10%';
+    break;
+    case 1:
+    td.style.width = '55%';
+    break;
+    case 2:
+    td.style.width = '35%';
+    break;
+}
 
-                if (row === 0)
-                    td.textContent = 'B' + colum;
-                else if (row === 1){
-                    td.textContent = NameColum[colum]
-                    td.style.writingMode = "vertical-rl"
+
+
+                if (colum === 0)
+                    td.textContent = 'B' + row;
+                else if (colum === 1){
+                    td.textContent = NameColum[row];
+                    
+                    // td.style.writingMode = "vertical-rl"
+                    
                     
                 }
                 else
-                    td.id = "iB" + colum;
+                    td.id = "iB" + row;
 
                 td.style.textAlign = "center";
+                td.style.padding = "0px";
                 tr.appendChild(td);
+
+
+                
+                    //th.style.width = '33%';
             }
             byteTable.appendChild(tr);
         }
