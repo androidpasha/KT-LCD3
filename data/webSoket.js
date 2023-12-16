@@ -1,5 +1,5 @@
 //let gateway = `ws://${window.location.hostname}:81/`;
-let gateway = `ws://192.168.4.1:81/`;
+let gateway = `ws://192.168.4.1/ws`;
 let websocket;
 window.addEventListener('load', onLoadWindow);
 

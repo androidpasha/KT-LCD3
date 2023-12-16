@@ -22,13 +22,15 @@ setInterval(() => {
     powerMomentary.textContent = DATA.Power.momentary.toFixed(0);
     powerSum.textContent = fixedValue(DATA.Power.sum);
     powerCurrent.textContent = DATA.Power.current.toFixed(1);
-    powerVoltage.textContent = DATA.Power.voltage.toFixed(1);
+    //powerVoltage.textContent = DATA.Power.voltage.toFixed(1);
 
     fatDrive.textContent = fixedValue(DATA.Cal.FatDrive);
     fatTotal.textContent = fixedValue(DATA.Cal.FatTotal/1000);
     calTotal.textContent=fixedValue(DATA.Cal.CalTotal/1000);
     calDrive.textContent=fixedValue(DATA.Cal.CalDrive);
-
+    if (DATA.cadence/6<300){
+    powerVoltage.textContent = fixedValue(DATA.cadence/6);
+    }
     function fixedValue(value){
         if (value <99)
         return value.toFixed(1)

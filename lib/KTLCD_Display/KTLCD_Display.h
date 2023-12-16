@@ -80,7 +80,7 @@ typedef struct ReceiveDataStruct
     uint8_t error;        //(0x20 or 0x25 or 0x28): "0info", 0x21: "6info", 0x22: "1info", 0x23: "2info", 0x24: "3info",  0x26: "4info"
     uint8_t ratedVoltage; // 24,36,48V
     uint8_t batteryLevel; // 0: empty, 1: border flashing, 2: charging, 3: empty, 4: 1 bar, 8: 2 bars, 16: full
-    uint8_t cadencePeriod;
+    uint32_t cadencePeriod;
     //  int8_t pasDataForCRC;
     uint8_t batteryPercent()
     {
@@ -268,7 +268,7 @@ private:
         receiveData.brake = bitRead(BYTE[7], 5);
         receiveData.power = BYTE[8] * settings.powerFactor;
         receiveData.temperature = (int8_t)BYTE[9] + 15;
-        receiveData.cadencePeriod = BYTE[11];
+        receiveData.cadencePeriod = (BYTE[10] << 8) | BYTE[11];
 
 #undef BYTE
     }

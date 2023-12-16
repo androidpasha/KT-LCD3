@@ -43,4 +43,5 @@ let DATA = { //Объект с данными таблицы
     Button6km: 0,
     assist: 0,
     throttle: 0,
+    cadence:0,
 };
