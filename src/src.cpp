@@ -21,14 +21,19 @@
 #include <LittleFS.h>
 #pragma endregion
 #pragma region offsetof //constants
-#define MET_CALCULATION_CALORIES // Класичний підрахунок калорій через MET еквівалент коли розкоментований рядок
-// #define SERIAL1 // Закомментировать если будет использоваться обычный Serial (0)
+#define MET_CALCULATION_CALORIES // підрахунок калорій через MET еквівалент коли розкоментований рядок або попередньою формулою, якщо закоментувати
+// #define SERIAL1                  // Закомментировать для ESP01 и если будет использоваться обычный Serial (0)
 #define MINIMUM_TIME_BETWEEN_WRITES_TO_THE_FILE_SYSTEM_SEC 60
-const char *ssidAP = "Bicycle";       // Название генерируемой точки доступа
-const uint8_t passToPercent[3][6] = { // таблица процентов помощи PAS согласно параметру С14
-    {0, 6, 17, 30, 45, 80},
-    {0, 12, 22, 40, 55, 80},
-    {0, 17, 30, 45, 66, 80}};
+const char *ssidAP = "Bicycle";           // Название генерируемой точки доступа
+const float passPercent[3][6] PROGMEM = { // таблица відсотків допомоги PAS згідно параметру С14
+                                          // {0, 6, 17, 30, 45, 80},  масив у відсотках з інструкції
+                                          // {0, 12, 22, 40, 55, 80},
+                                          // {0, 17, 30, 45, 66, 80}};
+
+    {1, 0.94, 0.83, 0.70, 0.55, 0.20}, // масив відсотків переведений у коефіцієнти за формулою
+    {1, 0.88, 0.78, 0.60, 0.45, 0.20}, // 100 - passPercent[pasAdjustment - 1][pasLevel]) / 100.0
+    {1, 0.83, 0.70, 0.55, 0.34, 0.20}};
+
 const char *dataStorageFileNameControllerSettings PROGMEM = "/controllerSettings.bin";
 const char *dataStorageFileNameOdometr PROGMEM = "/measurementData.bin";
 const char *dataStorageFileNameUser PROGMEM = "/userParameters.bin";
@@ -64,9 +69,9 @@ void setup()
 {
   Serial.begin(9600); // Швидкість лінії контроллеру 9600 бод
 #ifdef SERIAL1
-  Serial.swap(); // Переключаем аппаратный serial c gpio3, gpio1 на gpio13, gpio15 
+  Serial.swap(); // Переключаем аппаратный serial c gpio3, gpio1 на gpio13, gpio15
 #endif
-//  LittleFS.begin(); // Инициализируем работу с файловой системой/ это сделано в SaveTemplateDataToLFS
+  //  LittleFS.begin(); // Инициализируем работу с файловой системой/ это сделано в SaveTemplateDataToLFS
 
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssidAP, "", 1, 0, 1);                              // (SSID, NOT PASS, Channel, no hidden ssid, max conenction)
@@ -74,7 +79,7 @@ void setup()
   webServer.on("/", HTTP_GET, [](AsyncWebServerRequest *request) // откр index.html при запросе корня сервера
                { request->send(LittleFS, "/index.html", "text/html"); });
   // відправляємо файли на HTTP запити з ФС
-  webServer.serveStatic("/", LittleFS, "/"); 
+  webServer.serveStatic("/", LittleFS, "/");
   // Инициализируем Web-сервер
   webServer.begin();
   webServer.addHandler(&webSocket);
@@ -118,25 +123,6 @@ void loop()
   }
 }
 
-float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint8_t pasAdjustment)
-{
-  static const float basalMetabolicRate = (10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex); // базові витрати калорій людиною у спокої за добу
-
-#ifdef MET_CALCULATION_CALORIES
-  float МЕТ = 0.006 * pow(velocity, 2) + 0.22 * velocity + 1.0;                        // виведено кореляційно-регресивним аналізом з даних МЕТ наданих ВОЗ
-  float addPhysicalActivityCalories = (basalMetabolicRate * МЕТ) - basalMetabolicRate; // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) за добу
-#else
-  if (velocity < 1) // Формула для катання а не для відпочинку!!!
-    velocity = 1;
-  float addPhysicalActivityCalories = (basalMetabolicRate * 0.34 * velocity + 1000.0) - basalMetabolicRate; // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) за добу
-#endif
-  addPhysicalActivityCalories *= (float(100 - passToPercent[pasAdjustment - 1][pasLevel]) / 100.0); // урахування значення відсотків допомоги PAS
-  float sumCalories = basalMetabolicRate + addPhysicalActivityCalories;
-  sumCalories *= userParameters.calCorrectFactor; // Поправка від користувача
-  sumCalories /= 24;                              // за годину
-  return sumCalories;
-}
-
 void IRAM_ATTR every100ms()
 {
   scheduleFlag = true;
@@ -164,4 +150,25 @@ bool bicycleIsAvailableData()
     measurementData.caloriesTotal = calories.getResult();
   }
   return dataAvailable;
+}
+
+float calculateCalories(const User &user, float velocity, uint8_t pasLevel, uint8_t pasAdjustment)
+{
+#ifdef MET_CALCULATION_CALORIES
+  static const float BMR = // базові витрати калорій людиною у спокої за добу розраховуються один раз
+      (10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex);
+  float МЕТ = 0.0086 * velocity * velocity + 0.1167 * velocity + 1.95;                     // Метаболічний еквівалент:
+  float DVK = BMR * (МЕТ - 1) * pgm_read_float(&passPercent[pasAdjustment - 1][pasLevel]); // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) без БВК з урахуванням допомоги PAS, за добу
+  return (BMR + DVK) * userParameters.calCorrectFactor / 24;                                                                 // за годину
+#else
+  // Стара формула E = BMR * 0.34 * velocity + 1000.0, ккал/добу
+  static const float BMR = (10.0 * user.weight + 6.25 * user.height - 5.0 * user.age + 5.0 * !user.sex - 161.0 * user.sex); // базові витрати калорій людиною у спокої за добу
+  if (velocity < 1)                                                                                                         // Формула для катання а не для відпочинку!!!
+    velocity = 1;
+  float DVK = (BMR * 0.34 * velocity + 1000.0) - BMR;               // додаткові витрати калорій людиною під час рівномірного фізичного навантаження (велосипед) за добу
+  DVK *= pgm_read_float(&passPercent[pasAdjustment - 1][pasLevel]); // урахування значення відсотків допомоги PAS
+  float energy = BMR + DVK;
+  energy *= userParameters.calCorrectFactor; // Поправка від користувача
+  return energy / 24;                        // за годину
+#endif
 }
