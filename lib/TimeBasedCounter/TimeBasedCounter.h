@@ -1,6 +1,6 @@
 #pragma once
 #include "Arduino.h"
-#define maxMeasureTime 6000
+#define maxMeasureTime 5000
 class TimeBasedCounter
 {
 public:
@@ -12,11 +12,11 @@ public:
 
   void measure(const float currentValue)
   {
-      uint32_t measureTime = millis() - lastMeasureTime;
-      if (measureTime > maxMeasureTime)
-        measureTime = maxMeasureTime;
-      this->lastMeasureTime = millis();
-      this->result = calculateResult(currentValue, measureTime);
+    uint32_t measureTime = millis() - this->lastMeasureTime;
+    if (measureTime > maxMeasureTime)
+      return;
+    this->lastMeasureTime = millis();
+    this->result += currentValue * measureTime / 3600.0f;
   }
 
   void reset(const float startValue = 0)
@@ -33,10 +33,4 @@ public:
 private:
   float result;
   uint32_t lastMeasureTime;
-
-  float calculateResult(const float &currentValue, const uint32_t &measureTime)
-  {
-    result += currentValue * measureTime / 3600.0f;
-    return result;
-  }
 };

@@ -40,7 +40,7 @@ typedef struct SettingsStruct
     uint8_t C13_ControllerAbsBraking : 3;    // Range:0-5
     uint8_t C14_PasAdjustment : 2;           // Range:1-3
 
-    float onePeriodDistance() // ДОБАВИЛ КОД ЧТОБ НЕ ПЕРЕСЧИТЫВАЛО КАЖДЫЙ РАЗ. ПРОВЕРИТЬ!!!!
+    float onePeriodDistance()
     {
         static float result = 0;
         static uint16_t previousDiameter = 0;
@@ -49,7 +49,7 @@ typedef struct SettingsStruct
             previousDiameter = wheelRimDiameter;
             float diametrInc = (float)wheelRimDiameter;
             if (wheelRimDiameter == 700)
-                diametrInc = 27.5;
+                diametrInc = 27.5f;
             result = PI * diametrInc * 0.0254f;
         }
         return result;
@@ -241,13 +241,11 @@ private:
                 if (XOR11BYTE != buffer[6] or bufferSum == 0) // последний байт буфера не рассчитывается в XOR, поэтому bufferSize - 1
                     return false;
         */
-        // костыль проверки подлинности пакета т.к. с xor что-то не так. [0] всегда 65 а [2] номинальное напряжение акб
+        // проверка подлинности пакета. [0] всегда 65 а [2] номинальное напряжение акб
         bool crc = (buffer[0] == 65 and (buffer[2] == 24 or buffer[2] == 36 or buffer[2] == 48) and bufferSum != 0);
         if (crc == false)
             return false;
-
         // receiveData.pasDataForCRC = buffer[11] + added;
-
         return true;
     }
 
@@ -256,7 +254,6 @@ private:
 #define BYTE buffer
         receiveData.batteryLevel = BYTE[1];
         receiveData.ratedVoltage = BYTE[2];
-        //receiveData.ratedVoltage = 6*1000/(BYTE[11]-65);// Закомментировать после отладки!!!!
         receiveData.speedPeriod = (BYTE[3] << 8) | BYTE[4];
         receiveData.speed = settings.onePeriodDistance() * 3600 / receiveData.speedPeriod;
         if (receiveData.speed < MINSPEED)

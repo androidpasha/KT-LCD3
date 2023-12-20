@@ -13,12 +13,12 @@ struct SaveToFsStruct
       odoLubrication,
       caloriesTotal,
       caloriesDrive;
-  uint32_t timeGeneral,
-      
+  uint32_t
+      timeGeneral,
       wattMeter;
   float fatTotal() { return caloriesTotal / calKgRatio; }
   float fatDrive() { return (caloriesTotal - caloriesDrive) / calKgRatio; }
-  void reset(int startValue)
+  void reset(int startValue = 0)
   {
     odoGeneral = odoDaily = odoDrive = odoCharging = odoService = odoLubrication = startValue;
   }

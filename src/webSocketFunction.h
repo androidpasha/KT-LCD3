@@ -16,7 +16,6 @@ extern SaveToFsStruct measurementData;
 extern User userParameters;
 extern AsyncWebSocket webSocket;
 extern bool saveFlagMeasurementDataToFile;
-// extern bool clientConected;
 extern TimeBasedCounter odometr;
 extern TimeBasedCounter wattMeter;
 extern TimeBasedCounter calories;
@@ -82,7 +81,6 @@ void webSocketSendBicycleDataToDisplay()
 }
 
 void webSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)
-//(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
 {
   if (type == WS_EVT_DATA)
   {
@@ -198,7 +196,6 @@ void webSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEve
 
         String jsonData;
         serializeJson(doc, jsonData);
-        // if (clientConected == true)
         webSocket.textAll(jsonData);
       }
     }

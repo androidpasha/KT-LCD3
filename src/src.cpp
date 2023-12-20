@@ -22,7 +22,7 @@
 #pragma endregion
 #pragma region offsetof //constants
 #define MET_CALCULATION_CALORIES // підрахунок калорій через MET еквівалент коли розкоментований рядок або попередньою формулою, якщо закоментувати
-#define SERIAL1                  // Use serial1
+//#define SERIAL1                  // Use serial1
 #define MINIMUM_TIME_BETWEEN_WRITES_TO_THE_FILE_SYSTEM_SEC 60
 const char *ssidAP = "Bicycle";           // Назва точки доступу
 const float passPercent[3][6] PROGMEM = { // таблица відсотків допомоги PAS згідно параметру С14
